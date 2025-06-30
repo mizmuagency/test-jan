@@ -84,6 +84,7 @@ export const MobileStart = (): JSX.Element => {
               alt="Jan bau"
               src="/jan-bau-1.png"
             />
+            {/* 🎯 THIS IS THE DIV YOU'RE LOOKING FOR! */}
             <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px]">
               J.A.N. BAU GmbH
             </div>
