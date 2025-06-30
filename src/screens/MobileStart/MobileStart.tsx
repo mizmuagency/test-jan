@@ -57,7 +57,7 @@ export const MobileStart = (): JSX.Element => {
         </div>
 
         {/* Headline */}
-        <div className="w-[293px] mx-auto pt-16 pb-8 [font-family:'Roboto',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[45px] px-[35px]">
+        <div className="w-[293px] pt-16 pb-8 [font-family:'Roboto',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[45px] px-[35px] text-left">
           Wir stehen für höchste Qualität und saubere Arbeit.
         </div>
 
