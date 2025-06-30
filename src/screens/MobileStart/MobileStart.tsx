@@ -119,7 +119,7 @@ export const MobileStart = (): JSX.Element => {
           <img
             className="w-full h-full object-cover object-center"
             alt="J.A.N. BAU GmbH Logo"
-            src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/jan%20bau%20weissssssssssssss.png"
+            src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
           />
         </div>
 
