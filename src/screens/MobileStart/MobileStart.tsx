@@ -77,14 +77,14 @@ export const MobileStart = (): JSX.Element => {
 
         {/* Footer section */}
         <div className="w-full bg-[#262a28] px-[49px] py-16">
-          {/* Company logo and name - now stacked vertically */}
-          <div className="flex flex-col items-center mb-8">
+          {/* Company logo and name - now left aligned */}
+          <div className="flex flex-col items-start mb-8">
             <img
               className="w-24 h-[88px] object-cover mb-4"
               alt="Jan bau"
               src="/jan-bau-1.png"
             />
-            <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-center">
+            <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-left">
               J.A.N. BAU GmbH
             </div>
           </div>
