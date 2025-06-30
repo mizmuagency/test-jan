@@ -114,35 +114,16 @@ export const MobileStart = (): JSX.Element => {
           </div>
         )}
 
-        {/* Main logo with full viewport height */}
-        <div className="w-full h-screen flex items-center justify-center bg-white">
+        {/* Main logo with safe area padding */}
+        <div className="w-full h-[380px] pt-safe">
           <img
-            className="w-full h-auto max-h-[80vh] object-contain"
+            className="w-full h-full object-cover object-center"
             alt="J.A.N. BAU GmbH Logo"
             src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
           />
         </div>
 
-        {/* Headline */}
-        <div className="w-[293px] mx-auto pt-16 pb-8 [font-family:'Roboto',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[45px] px-[35px]">
-          Wir stehen für höchste Qualität und saubere Arbeit.
-        </div>
-
-        {/* Call to action section */}
-        <Card className="w-[323px] mx-auto mb-16 border-none shadow-none">
-          <CardContent className="p-0">
-            <div className="w-[302px] mx-auto mb-6 [font-family:'Roboto',Helvetica] font-normal text-black text-base tracking-[0] leading-5">
-              Kontaktieren Sie uns noch heute für ein unverbindliches Angebot –
-              wir machen aus Ihrem Projekt etwas Besonderes!
-            </div>
-
-            <Button className="flex w-[323px] h-[65px] items-center justify-center gap-2.5 p-3 bg-[#e53935] rounded-lg hover:bg-[#c62828] [font-family:'Roboto',Helvetica] font-semibold text-white text-base tracking-[0] leading-6">
-              ANFRAGE STARTEN
-            </Button>
-          </CardContent>
-        </Card>
-
-        {/* Navigation section with red cards - moved down */}
+        {/* Navigation section with red cards */}
         <div className="w-full h-[437px] bg-[#262a28] relative">
           {serviceCards.map((card, index) => (
             <div
@@ -160,16 +141,35 @@ export const MobileStart = (): JSX.Element => {
           ))}
         </div>
 
+        {/* Headline */}
+        <div className="w-[293px] pt-16 pb-8 [font-family:'Roboto',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[45px] px-[35px] text-left">
+          Wir stehen für höchste Qualität und saubere Arbeit.
+        </div>
+
+        {/* Call to action section */}
+        <Card className="w-[323px] mx-auto mb-16 border-none shadow-none">
+          <CardContent className="p-0">
+            <div className="w-[302px] mx-auto mb-6 [font-family:'Roboto',Helvetica] font-normal text-black text-base tracking-[0] leading-5">
+              Kontaktieren Sie uns noch heute für ein unverbindliches Angebot –
+              wir machen aus Ihrem Projekt etwas Besonderes!
+            </div>
+
+            <Button className="flex w-[323px] h-[65px] items-center justify-center gap-2.5 p-3 bg-[#e53935] rounded-lg hover:bg-[#c62828] [font-family:'Roboto',Helvetica] font-semibold text-white text-base tracking-[0] leading-6">
+              ANFRAGE STARTEN
+            </Button>
+          </CardContent>
+        </Card>
+
         {/* Footer section */}
         <div className="w-full bg-[#262a28] px-[49px] py-16">
-          {/* Company logo and name */}
-          <div className="flex items-center mb-8">
+          {/* Company logo and name - now left aligned */}
+          <div className="flex flex-col items-start mb-8">
             <img
-              className="w-24 h-[88px] object-cover mr-4"
+              className="w-24 h-[88px] object-cover mb-4"
               alt="Jan bau"
               src="/jan-bau-1.png"
             />
-            <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px]">
+            <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-left">
               J.A.N. BAU GmbH
             </div>
           </div>
