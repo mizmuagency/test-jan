@@ -1,9 +1,11 @@
-import { FacebookIcon, InstagramIcon, MapPin, Phone, Mail, MessageCircle } from "lucide-react";
-import React from "react";
+import { FacebookIcon, InstagramIcon, MapPin, Phone, Mail, MessageCircle, Menu } from "lucide-react";
+import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 
 export const MobileStart = (): JSX.Element => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   // Service cards data with adjusted positioning for equal spacing
   const serviceCards = [
     { title: "REFERENZEN", top: "top-[46px]", left: "left-[17px]" },
@@ -29,6 +31,74 @@ export const MobileStart = (): JSX.Element => {
   return (
     <div className="bg-white flex flex-row justify-center w-full min-h-screen">
       <div className="bg-white w-[400px] relative">
+        {/* Hamburger Menu Button - Fixed position in top right */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="fixed top-4 right-4 z-50 w-12 h-12 bg-[#e53935] rounded-lg flex items-center justify-center shadow-lg hover:bg-[#c62828] transition-colors"
+          aria-label="Toggle menu"
+        >
+          <Menu className="w-6 h-6 text-white" />
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <div className="fixed inset-0 z-40 bg-black bg-opacity-50" onClick={() => setIsMenuOpen(false)}>
+            <div className="fixed top-0 right-0 w-80 h-full bg-[#262a28] shadow-xl transform transition-transform">
+              <div className="p-6 pt-20">
+                <nav className="space-y-4">
+                  {navLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className="block py-3 px-4 text-white hover:bg-[#e53935] rounded-lg transition-colors [font-family:'Roboto',Helvetica] font-normal text-lg"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link}
+                    </a>
+                  ))}
+                </nav>
+                
+                {/* Contact info in menu */}
+                <div className="mt-8 pt-8 border-t border-gray-600">
+                  <div className="mb-4 text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-lg">
+                    KONTAKT
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <MapPin className="w-5 h-5 text-white flex-shrink-0" />
+                      <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm">
+                        Tödistrasse 2, 8854 Siebnen
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <Phone className="w-5 h-5 text-white flex-shrink-0" />
+                      <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm">
+                        +41 76 220 46 53
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <Mail className="w-5 h-5 text-white flex-shrink-0" />
+                      <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm">
+                        info@jan-bau.ch
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Social media icons in menu */}
+                  <div className="flex gap-6 mt-6">
+                    <FacebookIcon className="w-8 h-8 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+                    <InstagramIcon className="w-8 h-8 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+                    <MessageCircle className="w-8 h-8 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Main logo with safe area padding */}
         <div className="w-full h-[380px] pt-safe">
           <img
