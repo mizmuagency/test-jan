@@ -114,35 +114,17 @@ export const MobileStart = (): JSX.Element => {
           </div>
         )}
 
-        {/* Main logo with safe area padding */}
-        <div className="w-full h-[380px] pt-safe">
+        {/* Main logo with full viewport height */}
+        <div className="w-full h-screen flex items-center justify-center bg-white">
           <img
-            className="w-full h-full object-cover object-center"
+            className="w-full h-auto max-h-[80vh] object-contain"
             alt="J.A.N. BAU GmbH Logo"
             src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
           />
         </div>
 
-        {/* Navigation section with red cards */}
-        <div className="w-full h-[437px] bg-[#262a28] relative">
-          {serviceCards.map((card, index) => (
-            <div
-              key={index}
-              className={`absolute w-[165px] h-[165px] ${card.top} ${card.left} rounded-lg`}
-            >
-              <div className="absolute w-[165px] h-[163px] top-0.5 left-0 bg-[url(/screenshot-2025-06-16-at-18-18-24-1-3.png)] bg-cover bg-[50%_50%]" />
-              <div className="w-[165px] h-[165px] left-0 bg-[#f2000085] rounded-lg absolute top-0" />
-              <div
-                className={`absolute w-[145px] top-[76px] left-2.5 [font-family:'Roboto',Helvetica] font-bold text-white text-xl text-center tracking-[0] leading-5 ${card.extraClasses || ""}`}
-              >
-                {card.title}
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Headline */}
-        <div className="w-[293px] pt-16 pb-8 [font-family:'Roboto',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[45px] px-[35px] text-left">
+        <div className="w-[293px] mx-auto pt-16 pb-8 [font-family:'Roboto',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[45px] px-[35px]">
           Wir stehen für höchste Qualität und saubere Arbeit.
         </div>
 
@@ -160,16 +142,34 @@ export const MobileStart = (): JSX.Element => {
           </CardContent>
         </Card>
 
+        {/* Navigation section with red cards - moved down */}
+        <div className="w-full h-[437px] bg-[#262a28] relative">
+          {serviceCards.map((card, index) => (
+            <div
+              key={index}
+              className={`absolute w-[165px] h-[165px] ${card.top} ${card.left} rounded-lg`}
+            >
+              <div className="absolute w-[165px] h-[163px] top-0.5 left-0 bg-[url(/screenshot-2025-06-16-at-18-18-24-1-3.png)] bg-cover bg-[50%_50%]" />
+              <div className="w-[165px] h-[165px] left-0 bg-[#f2000085] rounded-lg absolute top-0" />
+              <div
+                className={`absolute w-[145px] top-[76px] left-2.5 [font-family:'Roboto',Helvetica] font-bold text-white text-xl text-center tracking-[0] leading-5 ${card.extraClasses || ""}`}
+              >
+                {card.title}
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Footer section */}
         <div className="w-full bg-[#262a28] px-[49px] py-16">
-          {/* Company logo and name - now left aligned */}
-          <div className="flex flex-col items-start mb-8">
+          {/* Company logo and name */}
+          <div className="flex items-center mb-8">
             <img
-              className="w-24 h-[88px] object-cover mb-4"
+              className="w-24 h-[88px] object-cover mr-4"
               alt="Jan bau"
               src="/jan-bau-1.png"
             />
-            <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-left">
+            <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px]">
               J.A.N. BAU GmbH
             </div>
           </div>
