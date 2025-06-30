@@ -30,15 +30,12 @@ export const MobileStart = (): JSX.Element => {
     <div className="bg-white flex flex-row justify-center w-full min-h-screen">
       <div className="bg-white w-[400px] relative">
         {/* Main logo with safe area padding */}
-        <div className="w-full h-[380px] pt-safe bg-[#262a28] flex flex-col items-center justify-center">
+        <div className="w-full h-[380px] pt-safe">
           <img
-            className="w-[200px] h-[200px] object-contain mb-4"
+            className="w-full h-full object-cover object-center"
             alt="J.A.N. BAU GmbH Logo"
             src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
           />
-          <h1 className="[font-family:'Roboto',Helvetica] font-bold text-white text-[32px] tracking-[0] leading-[36px] text-center">
-            J.A.N. BAU GmbH
-          </h1>
         </div>
 
         {/* Navigation section with red cards */}
