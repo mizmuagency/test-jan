@@ -140,24 +140,24 @@ export const MobileStart = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Headline */}
-        <div className="w-[293px] pt-16 pb-8 [font-family:'Roboto',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[45px] px-[35px] text-left">
-          Wir stehen für höchste Qualität und saubere Arbeit.
+        {/* Content section - All aligned to the left */}
+        <div className="w-full px-[35px] py-16">
+          {/* Headline - Left aligned */}
+          <div className="mb-8 [font-family:'Roboto',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[45px] text-left">
+            Wir stehen für höchste Qualität und saubere Arbeit.
+          </div>
+
+          {/* Description text - Left aligned */}
+          <div className="mb-8 [font-family:'Roboto',Helvetica] font-normal text-black text-base tracking-[0] leading-5 text-left">
+            Kontaktieren Sie uns noch heute für ein unverbindliches Angebot –
+            wir machen aus Ihrem Projekt etwas Besonderes!
+          </div>
+
+          {/* Button - Left aligned */}
+          <Button className="w-full h-[65px] bg-[#e53935] rounded-lg hover:bg-[#c62828] [font-family:'Roboto',Helvetica] font-semibold text-white text-base tracking-[0] leading-6">
+            ANFRAGE STARTEN
+          </Button>
         </div>
-
-        {/* Call to action section */}
-        <Card className="w-[323px] mx-auto mb-16 border-none shadow-none">
-          <CardContent className="p-0">
-            <div className="w-[302px] mx-auto mb-6 [font-family:'Roboto',Helvetica] font-normal text-black text-base tracking-[0] leading-5">
-              Kontaktieren Sie uns noch heute für ein unverbindliches Angebot –
-              wir machen aus Ihrem Projekt etwas Besonderes!
-            </div>
-
-            <Button className="flex w-[323px] h-[65px] items-center justify-center gap-2.5 p-3 bg-[#e53935] rounded-lg hover:bg-[#c62828] [font-family:'Roboto',Helvetica] font-semibold text-white text-base tracking-[0] leading-6">
-              ANFRAGE STARTEN
-            </Button>
-          </CardContent>
-        </Card>
 
         {/* Footer section */}
         <div className="w-full bg-[#262a28] px-[49px] py-16">
