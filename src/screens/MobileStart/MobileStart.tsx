@@ -31,6 +31,19 @@ export const MobileStart = (): JSX.Element => {
   return (
     <div className="bg-white flex flex-row justify-center w-full min-h-screen">
       <div className="bg-white w-[400px] relative">
+        {/* Home Logo Button - Top Left */}
+        <button
+          onClick={() => window.location.reload()}
+          className="fixed top-4 left-4 z-50 w-10 h-10 flex justify-center items-center"
+          aria-label="Home"
+        >
+          <img
+            src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
+            alt="J.A.N. BAU Home"
+            className="w-10 h-10 object-contain"
+          />
+        </button>
+
         {/* Hamburger Menu Button - Simple 3 lines */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -106,7 +119,7 @@ export const MobileStart = (): JSX.Element => {
           <img
             className="w-full h-full object-cover object-center"
             alt="J.A.N. BAU GmbH Logo"
-            src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
+            src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/jan%20bau%20weissssssssssssss.png"
           />
         </div>
 
