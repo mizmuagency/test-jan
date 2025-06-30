@@ -130,7 +130,7 @@ export const MobileStart = (): JSX.Element => {
               key={index}
               className={`absolute w-[165px] h-[165px] ${card.top} ${card.left} rounded-lg`}
             >
-              <div className="absolute w-[165px] h-[163px] top-0.5 left-0 bg-[url(/screenshot-2025-06-16-at-18-18-24-1-3.png)] bg-cover bg-[50%_50%]" />
+              <div className="absolute w-[165px] h-[163px] top-0.5 left-0 bg-[url(/screenshot-2025-06-16-at-18-18-24-1-3.png)] bg-cover bg-[50%_50%] rounded-lg" />
               <div className="w-[165px] h-[165px] left-0 bg-[#f2000085] rounded-lg absolute top-0" />
               <div
                 className={`absolute w-[145px] top-[76px] left-2.5 [font-family:'Roboto',Helvetica] font-bold text-white text-xl text-center tracking-[0] leading-5 ${card.extraClasses || ""}`}
