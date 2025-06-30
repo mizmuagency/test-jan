@@ -1,4 +1,4 @@
-import { FacebookIcon, InstagramIcon, MapPin, Phone, Mail, MessageCircle, Menu } from "lucide-react";
+import { FacebookIcon, InstagramIcon, MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
@@ -31,13 +31,15 @@ export const MobileStart = (): JSX.Element => {
   return (
     <div className="bg-white flex flex-row justify-center w-full min-h-screen">
       <div className="bg-white w-[400px] relative">
-        {/* Hamburger Menu Button - Fixed position in top right */}
+        {/* Hamburger Menu Button - Simple 3 lines */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="fixed top-4 right-4 z-50 w-12 h-12 bg-[#e53935] rounded-lg flex items-center justify-center shadow-lg hover:bg-[#c62828] transition-colors"
+          className="fixed top-4 right-4 z-50 w-10 h-10 flex flex-col justify-center items-center space-y-1"
           aria-label="Toggle menu"
         >
-          <Menu className="w-6 h-6 text-white" />
+          <div className="w-6 h-0.5 bg-black"></div>
+          <div className="w-6 h-0.5 bg-black"></div>
+          <div className="w-6 h-0.5 bg-black"></div>
         </button>
 
         {/* Mobile Menu Overlay */}
