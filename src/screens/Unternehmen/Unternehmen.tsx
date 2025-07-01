@@ -222,6 +222,64 @@ export const Unternehmen = (): JSX.Element => {
           )}
         </div>
 
+        {/* Company History Section */}
+        <div className="px-6 py-8 bg-white">
+          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+            UNSERE GESCHICHTE
+          </h2>
+          
+          <div className="space-y-4 text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base leading-relaxed">
+            <p>
+              Firmengründer Nazmin ist im Bauhandwerk aufgewachsen und entwickelte früh ein Gespür für Präzision, Tiefe und Verlässlichkeit. Aufmerksam, analytisch, mitdenkend – das gehört von Anfang an dazu.
+            </p>
+            
+            <p>
+              Nach dem Abschluss als Bauzeichner führte ihn sein Weg über die Baustelle in Richtung Zusammenarbeit mit Frau Amina Hrnijic führt er erfolgreich die J.A.N. GmbH und kann somit auf Heller und Gipser sein Wissen und seine Leidenschaft täglich einbringen.
+            </p>
+            
+            <p>
+              Bis heute prägt diese familiäre Führung unsere Arbeit. Wir verstehen uns als echter Partner unserer Kunden und arbeiten mit handwerklicher Qualität, Zuverlässigkeit und dem Anspruch, jedes Projekt mit Sorgfalt und Herz umzusetzen.
+            </p>
+          </div>
+        </div>
+
+        {/* Company Vision Section */}
+        <div className="px-6 py-8 bg-white">
+          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+            UNSERE VISION
+          </h2>
+          
+          <div className="space-y-4 text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base leading-relaxed">
+            <p>
+              Wir möchten, dass unsere Arbeit sichtbar bleibt – in Form von Qualität, die überzeugt. Unser Ziel ist es, weiter zu wachsen, und dabei mit unsere familiären Werte und unseren hohen Anspruch an unsere Leistungen und die Qualität aus den Augen zu verlieren.
+            </p>
+          </div>
+        </div>
+
+        {/* Services Overview Section */}
+        <div className="px-6 py-8 bg-white">
+          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+            Was umfasst
+          </h2>
+          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+            unser <span className="text-[#e53935]">Leistungs-</span>
+          </h2>
+          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+            <span className="text-[#e53935]">spektrum?</span>
+          </h2>
+          
+          <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base leading-relaxed mb-8">
+            Nebst klassischem und modernem Trockenbau, sind wir in weiteren Disziplinen Spezialisten. Hier erfahren Sie konkret worin.
+          </p>
+          
+          <Link
+            to="/leistungen"
+            className="inline-block w-full bg-[#e53935] text-white py-4 px-6 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-center hover:bg-[#c62828] transition-colors"
+          >
+            ZU UNSEREN LEISTUNGEN
+          </Link>
+        </div>
+
         {/* Complete Footer Section - Same as other pages */}
         <div className="w-full bg-[#262a28] px-6 sm:px-8 py-12 sm:py-16">
           {/* Company logo and name - left aligned */}
