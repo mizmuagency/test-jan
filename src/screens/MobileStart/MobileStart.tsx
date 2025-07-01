@@ -95,8 +95,8 @@ export const MobileStart = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Navigation section with red cards - 2x2 Grid */}
-        <div className="w-full bg-[#262a28] px-4 py-6 sm:py-8">
+        {/* Navigation section with red cards - 2x2 Grid - Moved down by 40px */}
+        <div className="w-full bg-[#262a28] px-4 py-6 sm:py-8 mt-10">
           <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm mx-auto">
             {serviceCards.map((card, index) => (
               <div
