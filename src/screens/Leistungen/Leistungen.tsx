@@ -92,19 +92,19 @@ export const Leistungen = (): JSX.Element => {
         <div className="px-6 pb-8">
           {/* RAUMAKUSTIK Section */}
           <div className="mb-8">
-            <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+            <div className="relative h-[400px] overflow-hidden rounded-lg">
               <img
                 src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Raumakustik"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-3">
+                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
                   RAUMAKUSTIK
                 </h2>
                 <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
-                  Ein besonderer Schwerpunkt unserer Tätigkeit liegt in der innovativen Raumakustik. Wir sind spezialisiert auf die Ausführung von fugenlosen Akustikdecken und -wänden. Diese bieten nicht nur eine exzellente Schallabsorption, sondern überzeugen auch durch ihre hochwertige Optik. Darüber hinaus sind sie besonders pflegeleicht und langlebig.
+                  Ein besonderer Schwerpunkt unserer Tätigkeit liegt in der innovativen Raumakustik, insbesondere in der Ausführung von fugenlosen Akustikdecken-Systemen. Diese bieten nicht nur eine exzellente Schallabsorption, sondern ermöglichen durch ihre homogene Oberfläche auch ein hochwertiges architektonisches Erscheinungsbild.
                 </p>
               </div>
             </div>
@@ -112,19 +112,19 @@ export const Leistungen = (): JSX.Element => {
 
           {/* TROCKENBAU Section */}
           <div className="mb-8">
-            <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+            <div className="relative h-[400px] overflow-hidden rounded-lg">
               <img
                 src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Trockenbau"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-3">
+                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
                   TROCKENBAU
                 </h2>
                 <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
-                  Moderne Trockenbauweise ermöglicht flexible Raumaufteilungen und schnelle Bauzeiten. Von einfachen Trennwänden bis hin zu komplexen Raum-in-Raum-Systemen realisieren wir alle Anforderungen mit höchster Präzision und Qualität.
+                  Moderne Trockenbauweise ermöglicht flexible Raumaufteilungen und schnelle Bauzeiten. Von einfachen Trennwänden bis hin zu komplexen Raum-in-Raum-Systemen realisieren wir alle Anforderungen mit höchster Präzision und Qualität. Unsere Expertise umfasst metallische Unterkonstruktionen und abgehängte Deckensysteme.
                 </p>
               </div>
             </div>
@@ -132,19 +132,19 @@ export const Leistungen = (): JSX.Element => {
 
           {/* BRANDSCHUTZ Section */}
           <div className="mb-8">
-            <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+            <div className="relative h-[400px] overflow-hidden rounded-lg">
               <img
                 src="https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Brandschutz"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-3">
+                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
                   BRANDSCHUTZ
                 </h2>
                 <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
-                  Sicherheit steht an erster Stelle. Unsere Brandschutzlösungen erfüllen alle aktuellen Normen und Vorschriften. Wir installieren zertifizierte Brandschutzsysteme für Wände, Decken und Durchführungen.
+                  Sicherheit steht an erster Stelle. Unsere Brandschutzlösungen erfüllen alle aktuellen Normen und Vorschriften. Wir installieren zertifizierte Brandschutzsysteme für Wände, Decken und Durchführungen. Von der Planung bis zur Ausführung gewährleisten wir höchste Sicherheitsstandards.
                 </p>
               </div>
             </div>
@@ -152,19 +152,19 @@ export const Leistungen = (): JSX.Element => {
 
           {/* SPACHTELARBEITEN Section */}
           <div className="mb-8">
-            <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+            <div className="relative h-[400px] overflow-hidden rounded-lg">
               <img
                 src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Spachtelarbeiten"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-3">
+                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
                   SPACHTELARBEITEN
                 </h2>
                 <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
-                  Perfekte Oberflächen sind unser Markenzeichen. Von der Grundspachtelung bis zur Q4-Qualität bieten wir alle Qualitätsstufen für höchste Ansprüche. Unsere erfahrenen Spezialisten sorgen für makellose Ergebnisse.
+                  Perfekte Oberflächen sind unser Markenzeichen. Von der Grundspachtelung bis zur Q4-Qualität bieten wir alle Qualitätsstufen für höchste Ansprüche. Unsere erfahrenen Spezialisten sorgen für makellose Ergebnisse und bereiten Ihre Oberflächen optimal für die weitere Bearbeitung vor.
                 </p>
               </div>
             </div>
