@@ -88,63 +88,85 @@ export const Leistungen = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Services List */}
+        {/* Detailed Service Sections */}
         <div className="px-6 pb-8">
-          <div className="space-y-6">
-            {/* Service Category 1 */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-black [font-family:'Roboto',Helvetica] mb-4">
-                TROCKENBAU
-              </h3>
-              <ul className="space-y-2 text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base">
-                <li>• Metallische Unterkonstruktionen</li>
-                <li>• Vorsatzschalen</li>
-                <li>• Trennwände</li>
-                <li>• Raum-in-Raum-Systeme</li>
-                <li>• Abgehängte Decken</li>
-              </ul>
+          {/* RAUMAKUSTIK Section */}
+          <div className="mb-8">
+            <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+              <img
+                src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Raumakustik"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-3">
+                  RAUMAKUSTIK
+                </h2>
+                <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
+                  Ein besonderer Schwerpunkt unserer Tätigkeit liegt in der innovativen Raumakustik. Wir sind spezialisiert auf die Ausführung von fugenlosen Akustikdecken und -wänden. Diese bieten nicht nur eine exzellente Schallabsorption, sondern überzeugen auch durch ihre hochwertige Optik. Darüber hinaus sind sie besonders pflegeleicht und langlebig.
+                </p>
+              </div>
             </div>
+          </div>
 
-            {/* Service Category 2 */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-black [font-family:'Roboto',Helvetica] mb-4">
-                AKUSTIK & BRANDSCHUTZ
-              </h3>
-              <ul className="space-y-2 text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base">
-                <li>• Akustikbau</li>
-                <li>• Schallschutz</li>
-                <li>• Brandschutz</li>
-                <li>• Spezielle Akustiksysteme</li>
-                <li>• Brandschutzbekleidungen</li>
-              </ul>
+          {/* TROCKENBAU Section */}
+          <div className="mb-8">
+            <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+              <img
+                src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Trockenbau"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-3">
+                  TROCKENBAU
+                </h2>
+                <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
+                  Moderne Trockenbauweise ermöglicht flexible Raumaufteilungen und schnelle Bauzeiten. Von einfachen Trennwänden bis hin zu komplexen Raum-in-Raum-Systemen realisieren wir alle Anforderungen mit höchster Präzision und Qualität.
+                </p>
+              </div>
             </div>
+          </div>
 
-            {/* Service Category 3 */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-black [font-family:'Roboto',Helvetica] mb-4">
-                SPACHTELARBEITEN
-              </h3>
-              <ul className="space-y-2 text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base">
-                <li>• Gipsspachtelarbeiten</li>
-                <li>• Oberflächenbehandlung</li>
-                <li>• Fugenspachtelung</li>
-                <li>• Glättarbeiten</li>
-                <li>• Qualitätsstufen Q1-Q4</li>
-              </ul>
+          {/* BRANDSCHUTZ Section */}
+          <div className="mb-8">
+            <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+              <img
+                src="https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Brandschutz"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-3">
+                  BRANDSCHUTZ
+                </h2>
+                <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
+                  Sicherheit steht an erster Stelle. Unsere Brandschutzlösungen erfüllen alle aktuellen Normen und Vorschriften. Wir installieren zertifizierte Brandschutzsysteme für Wände, Decken und Durchführungen.
+                </p>
+              </div>
             </div>
+          </div>
 
-            {/* Service Category 4 */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-black [font-family:'Roboto',Helvetica] mb-4">
-                WEITERE LEISTUNGEN
-              </h3>
-              <ul className="space-y-2 text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base">
-                <li>• Türmontagen</li>
-                <li>• Abbrucharbeiten</li>
-                <li>• Entsorgung</li>
-                <li>• Beratung & Planung</li>
-                <li>• Qualitätskontrolle</li>
-              </ul>
+          {/* SPACHTELARBEITEN Section */}
+          <div className="mb-8">
+            <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+              <img
+                src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Spachtelarbeiten"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-3">
+                  SPACHTELARBEITEN
+                </h2>
+                <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
+                  Perfekte Oberflächen sind unser Markenzeichen. Von der Grundspachtelung bis zur Q4-Qualität bieten wir alle Qualitätsstufen für höchste Ansprüche. Unsere erfahrenen Spezialisten sorgen für makellose Ergebnisse.
+                </p>
+              </div>
             </div>
           </div>
         </div>
