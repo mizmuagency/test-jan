@@ -13,31 +13,37 @@ export const Unternehmen = (): JSX.Element => {
     { name: "KONTAKT", path: "/kontakt" }
   ];
 
-  // Team members data
+  // Team members data from screenshot
   const teamMembers = [
     {
-      name: "Nazmi Hoxha",
+      name: "Nazmin Hrnijic",
       position: "Geschäftsführer",
-      phone: "+41 76 220 46 53",
-      email: "nazmi@jan-bau.ch"
+      phone: "T: +41 76 220 46 52",
+      email: "info@jan-bau.ch"
     },
     {
-      name: "Alban Hoxha",
-      position: "Mitinhaber",
-      phone: "+41 76 650 75 60",
-      email: "alban@jan-bau.ch"
+      name: "Amina Hrnijic",
+      position: "Administration",
+      phone: "T: +41 76 310 27 09",
+      email: "vorne.name@jan-bau.ch"
     },
     {
-      name: "Burim Hoxha",
-      position: "",
+      name: "Naim Hrnijic",
+      position: "Vorarbeiter",
+      phone: "T: +41 76 320 92 62",
+      email: "vorne.name@jan-bau.ch"
+    },
+    {
+      name: "Kjenan Misinii",
+      position: "Vorarbeiter",
       phone: "",
-      email: ""
+      email: "info@jan-bau.ch"
     },
     {
-      name: "Kastriot Hoxha",
-      position: "",
-      phone: "",
-      email: ""
+      name: "Felix Bärtschiger",
+      position: "Kundenposer",
+      phone: "T: +41 76 310 27 09",
+      email: "info@jan-bau.ch"
     }
   ];
 
@@ -136,47 +142,84 @@ export const Unternehmen = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="px-6 pb-8">
-          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+        {/* Team Section - Dark Background */}
+        <div className="bg-[#3a3a3a] px-6 py-8">
+          <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-6">
             PERSONEN
           </h2>
           
           <div className="grid grid-cols-2 gap-4">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 text-center">
-                {/* Profile Picture Placeholder */}
-                <div className="w-20 h-20 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
-                  <User className="w-10 h-10 text-gray-400" />
+            {teamMembers.slice(0, 4).map((member, index) => (
+              <div key={index} className="text-center">
+                {/* Profile Picture Placeholder - Dark Circle */}
+                <div className="w-20 h-20 mx-auto mb-3 bg-black rounded-full flex items-center justify-center">
+                  <User className="w-10 h-10 text-white" />
                 </div>
                 
                 {/* Name */}
-                <h3 className="text-black [font-family:'Roboto',Helvetica] font-bold text-sm mb-2">
+                <h3 className="text-white [font-family:'Roboto',Helvetica] font-bold text-sm mb-1">
                   {member.name}
                 </h3>
                 
                 {/* Position */}
                 {member.position && (
-                  <p className="text-gray-600 [font-family:'Roboto',Helvetica] text-xs mb-2">
+                  <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-xs mb-2">
                     {member.position}
                   </p>
                 )}
                 
                 {/* Contact Info */}
                 {member.phone && (
-                  <p className="text-gray-600 [font-family:'Roboto',Helvetica] text-xs mb-1">
+                  <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-xs mb-1">
                     {member.phone}
                   </p>
                 )}
                 
                 {member.email && (
-                  <p className="text-gray-600 [font-family:'Roboto',Helvetica] text-xs">
+                  <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-xs">
                     {member.email}
                   </p>
                 )}
               </div>
             ))}
           </div>
+          
+          {/* Fifth team member - centered */}
+          {teamMembers[4] && (
+            <div className="flex justify-center mt-4">
+              <div className="text-center">
+                {/* Profile Picture Placeholder - Dark Circle */}
+                <div className="w-20 h-20 mx-auto mb-3 bg-black rounded-full flex items-center justify-center">
+                  <User className="w-10 h-10 text-white" />
+                </div>
+                
+                {/* Name */}
+                <h3 className="text-white [font-family:'Roboto',Helvetica] font-bold text-sm mb-1">
+                  {teamMembers[4].name}
+                </h3>
+                
+                {/* Position */}
+                {teamMembers[4].position && (
+                  <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-xs mb-2">
+                    {teamMembers[4].position}
+                  </p>
+                )}
+                
+                {/* Contact Info */}
+                {teamMembers[4].phone && (
+                  <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-xs mb-1">
+                    {teamMembers[4].phone}
+                  </p>
+                )}
+                
+                {teamMembers[4].email && (
+                  <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-xs">
+                    {teamMembers[4].email}
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Complete Footer Section - Same as other pages */}
