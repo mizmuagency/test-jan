@@ -1,25 +1,26 @@
 import { FacebookIcon, InstagramIcon, MapPin, Phone, Mail, MessageCircle, X } from "lucide-react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 
 export const MobileStart = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Service cards data
+  // Service cards data with navigation links
   const serviceCards = [
-    { title: "REFERENZEN" },
-    { title: "LEISTUNGEN" },
-    { title: "UNTERNEHMEN" },
-    { title: "KONTAKT" },
+    { title: "REFERENZEN", path: "/referenzen" },
+    { title: "LEISTUNGEN", path: "/leistungen" },
+    { title: "UNTERNEHMEN", path: "/unternehmen" },
+    { title: "KONTAKT", path: "/kontakt" },
   ];
 
   // Main navigation items (matching screenshot)
   const mainNavItems = [
-    "REFERENZEN",
-    "LEISTUNGEN", 
-    "UNTERNEHMEN",
-    "KONTAKT"
+    { name: "REFERENZEN", path: "/referenzen" },
+    { name: "LEISTUNGEN", path: "/leistungen" },
+    { name: "UNTERNEHMEN", path: "/unternehmen" },
+    { name: "KONTAKT", path: "/kontakt" }
   ];
 
   return (
@@ -70,13 +71,13 @@ export const MobileStart = (): JSX.Element => {
               <nav className="space-y-6 sm:space-y-8">
                 {mainNavItems.map((item, index) => (
                   <div key={index}>
-                    <a
-                      href="#"
+                    <Link
+                      to={item.path}
                       className="block text-white text-xl sm:text-2xl font-bold [font-family:'Roboto',Helvetica] tracking-wide hover:text-gray-300 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {item}
-                    </a>
+                      {item.name}
+                    </Link>
                   </div>
                 ))}
               </nav>
@@ -99,9 +100,10 @@ export const MobileStart = (): JSX.Element => {
         <div className="w-full bg-[#262a28] px-4 py-6 sm:py-8 mt-10">
           <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm mx-auto">
             {serviceCards.map((card, index) => (
-              <div
+              <Link
                 key={index}
-                className="aspect-square relative rounded-lg overflow-hidden"
+                to={card.path}
+                className="aspect-square relative rounded-lg overflow-hidden block"
               >
                 <div className="absolute inset-0 bg-[url(/screenshot-2025-06-16-at-18-18-24-1-3.png)] bg-cover bg-center rounded-lg" />
                 <div className="absolute inset-0 bg-[#f2000085] rounded-lg" />
@@ -110,7 +112,7 @@ export const MobileStart = (): JSX.Element => {
                     {card.title}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -199,12 +201,13 @@ export const MobileStart = (): JSX.Element => {
             <div className="mb-3 sm:mb-4 [font-family:'Roboto',Helvetica] font-bold text-[#f84646] text-lg sm:text-xl tracking-[0] leading-[22px]">
               Navigation
             </div>
-            <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px]">
-              Startseite<br />
-              Kompetenzen<br />
-              Unternehmen<br />
-              Kontakt<br />
-              Datenschutz
+            <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px] space-y-1">
+              <Link to="/" className="block hover:text-[#e53935] transition-colors">Startseite</Link>
+              <Link to="/referenzen" className="block hover:text-[#e53935] transition-colors">Referenzen</Link>
+              <Link to="/leistungen" className="block hover:text-[#e53935] transition-colors">Leistungen</Link>
+              <Link to="/unternehmen" className="block hover:text-[#e53935] transition-colors">Unternehmen</Link>
+              <Link to="/kontakt" className="block hover:text-[#e53935] transition-colors">Kontakt</Link>
+              <Link to="/datenschutz" className="block hover:text-[#e53935] transition-colors">Datenschutz</Link>
             </div>
           </div>
 
