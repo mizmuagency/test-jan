@@ -25,29 +25,33 @@ export const MobileStart = (): JSX.Element => {
   return (
     <div className="bg-white flex flex-row justify-center w-full min-h-screen">
       <div className="bg-white w-[400px] relative">
-        {/* Home Logo Button - Top Left */}
-        <button
-          onClick={() => window.location.reload()}
-          className="fixed top-4 left-4 z-50 w-10 h-10 flex justify-center items-center"
-          aria-label="Home"
-        >
-          <img
-            src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
-            alt="J.A.N. BAU Home"
-            className="w-10 h-10 object-contain"
-          />
-        </button>
+        {/* Home Logo Button - Top Left - Hidden when menu is open */}
+        {!isMenuOpen && (
+          <button
+            onClick={() => window.location.reload()}
+            className="fixed top-4 left-4 z-50 w-10 h-10 flex justify-center items-center"
+            aria-label="Home"
+          >
+            <img
+              src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
+              alt="J.A.N. BAU Home"
+              className="w-10 h-10 object-contain"
+            />
+          </button>
+        )}
 
-        {/* Hamburger Menu Button - Simple 3 lines */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="fixed top-4 right-4 z-50 w-10 h-10 flex flex-col justify-center items-center space-y-1"
-          aria-label="Toggle menu"
-        >
-          <div className="w-6 h-0.5 bg-black"></div>
-          <div className="w-6 h-0.5 bg-black"></div>
-          <div className="w-6 h-0.5 bg-black"></div>
-        </button>
+        {/* Hamburger Menu Button - Simple 3 lines - Hidden when menu is open */}
+        {!isMenuOpen && (
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="fixed top-4 right-4 z-50 w-10 h-10 flex flex-col justify-center items-center space-y-1"
+            aria-label="Toggle menu"
+          >
+            <div className="w-6 h-0.5 bg-black"></div>
+            <div className="w-6 h-0.5 bg-black"></div>
+            <div className="w-6 h-0.5 bg-black"></div>
+          </button>
+        )}
 
         {/* Mobile Menu Overlay - Full screen dark overlay */}
         {isMenuOpen && (
