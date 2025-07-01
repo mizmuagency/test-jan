@@ -1,4 +1,4 @@
-import { FacebookIcon, InstagramIcon, MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { FacebookIcon, InstagramIcon, MapPin, Phone, Mail, MessageCircle, X } from "lucide-react";
 import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
@@ -14,13 +14,12 @@ export const MobileStart = (): JSX.Element => {
     { title: "KONTAKT" },
   ];
 
-  // Navigation links
-  const navLinks = [
-    "Startseite",
-    "Kompetenzen",
-    "Unternehmen",
-    "Kontakt",
-    "Datenschutz",
+  // Main navigation items (matching screenshot)
+  const mainNavItems = [
+    "REFERENZEN",
+    "LEISTUNGEN", 
+    "UNTERNEHMEN",
+    "KONTAKT"
   ];
 
   return (
@@ -50,61 +49,33 @@ export const MobileStart = (): JSX.Element => {
           <div className="w-6 h-0.5 bg-black"></div>
         </button>
 
-        {/* Mobile Menu Overlay */}
+        {/* Mobile Menu Overlay - Full screen dark overlay */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-40 bg-black bg-opacity-50" onClick={() => setIsMenuOpen(false)}>
-            <div className="fixed top-0 right-0 w-80 h-full bg-[#262a28] shadow-xl transform transition-transform">
-              <div className="p-6 pt-20">
-                <nav className="space-y-4">
-                  {navLinks.map((link, index) => (
+          <div className="fixed inset-0 z-40 bg-[#3a3a3a]">
+            {/* Close button - X in top right */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-6 right-6 z-50"
+              aria-label="Close menu"
+            >
+              <X className="w-8 h-8 text-white" />
+            </button>
+
+            {/* Navigation items */}
+            <div className="pt-20 px-8">
+              <nav className="space-y-8">
+                {mainNavItems.map((item, index) => (
+                  <div key={index}>
                     <a
-                      key={index}
                       href="#"
-                      className="block py-3 px-4 text-white hover:bg-[#e53935] rounded-lg transition-colors [font-family:'Roboto',Helvetica] font-normal text-lg"
+                      className="block text-white text-2xl font-bold [font-family:'Roboto',Helvetica] tracking-wide hover:text-gray-300 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {link}
+                      {item}
                     </a>
-                  ))}
-                </nav>
-                
-                {/* Contact info in menu */}
-                <div className="mt-8 pt-8 border-t border-gray-600">
-                  <div className="mb-4 text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-lg">
-                    KONTAKT
                   </div>
-                  
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-5 h-5 text-white flex-shrink-0" />
-                      <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm">
-                        Tödistrasse 2, 8854 Siebnen
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <Phone className="w-5 h-5 text-white flex-shrink-0" />
-                      <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm">
-                        +41 76 220 46 53
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <Mail className="w-5 h-5 text-white flex-shrink-0" />
-                      <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm">
-                        info@jan-bau.ch
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Social media icons in menu */}
-                  <div className="flex gap-6 mt-6">
-                    <FacebookIcon className="w-8 h-8 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
-                    <InstagramIcon className="w-8 h-8 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
-                    <MessageCircle className="w-8 h-8 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
-                  </div>
-                </div>
-              </div>
+                ))}
+              </nav>
             </div>
           </div>
         )}
@@ -225,12 +196,11 @@ export const MobileStart = (): JSX.Element => {
               Navigation
             </div>
             <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
-              {navLinks.map((link, index) => (
-                <React.Fragment key={index}>
-                  {link}
-                  {index < navLinks.length - 1 && <br />}
-                </React.Fragment>
-              ))}
+              Startseite<br />
+              Kompetenzen<br />
+              Unternehmen<br />
+              Kontakt<br />
+              Datenschutz
             </div>
           </div>
 
