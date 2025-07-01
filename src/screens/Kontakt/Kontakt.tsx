@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 
 export const Kontakt = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [formData, setFormData] = useState({
+    vorname: '',
+    nachname: '',
+    email: '',
+    nachricht: ''
+  });
 
   // Main navigation items
   const mainNavItems = [
@@ -12,6 +19,34 @@ export const Kontakt = (): JSX.Element => {
     { name: "UNTERNEHMEN", path: "/unternehmen" },
     { name: "KONTAKT", path: "/kontakt" }
   ];
+
+  const services = [
+    "Trockenbau",
+    "Stukko", 
+    "Gipserarbeit",
+    "Andere"
+  ];
+
+  const toggleService = (service: string) => {
+    setSelectedServices(prev => 
+      prev.includes(service) 
+        ? prev.filter(s => s !== service)
+        : [...prev, service]
+    );
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', { ...formData, services: selectedServices });
+  };
 
   return (
     <div className="bg-white w-full min-h-screen">
@@ -144,19 +179,103 @@ export const Kontakt = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Call to Action Section */}
-        <div className="px-6 py-8 bg-[#f5f5f5] mx-6 rounded-lg mb-8">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-black [font-family:'Roboto',Helvetica] mb-4">
-              Bereit für Ihr Projekt?
-            </h3>
-            <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base mb-6">
-              Kontaktieren Sie uns noch heute für ein unverbindliches Angebot.
-            </p>
-            <button className="bg-[#e53935] text-white px-8 py-3 rounded-lg [font-family:'Roboto',Helvetica] font-semibold hover:bg-[#c62828] transition-colors">
-              ANFRAGE STARTEN
+        {/* Contact Form Section */}
+        <div className="px-6 pb-8">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Service Interest Section */}
+            <div>
+              <h3 className="text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-lg mb-4">
+                Ich interessiere mich für:
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {services.map((service) => (
+                  <button
+                    key={service}
+                    type="button"
+                    onClick={() => toggleService(service)}
+                    className={`px-4 py-3 rounded-full text-sm font-medium transition-colors ${
+                      selectedServices.includes(service)
+                        ? 'bg-[#3a3a3a] text-white'
+                        : 'bg-[#3a3a3a] text-white hover:bg-[#4a4a4a]'
+                    }`}
+                  >
+                    {service}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Form Fields */}
+            <div className="space-y-6">
+              {/* Vorname */}
+              <div>
+                <label className="block text-black [font-family:'Roboto',Helvetica] text-sm mb-2">
+                  Vorname*
+                </label>
+                <input
+                  type="text"
+                  name="vorname"
+                  value={formData.vorname}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full border-b-2 border-gray-300 bg-transparent pb-2 text-black focus:border-[#e53935] focus:outline-none transition-colors"
+                />
+              </div>
+
+              {/* Nachname */}
+              <div>
+                <label className="block text-black [font-family:'Roboto',Helvetica] text-sm mb-2">
+                  Nachname*
+                </label>
+                <input
+                  type="text"
+                  name="nachname"
+                  value={formData.nachname}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full border-b-2 border-gray-300 bg-transparent pb-2 text-black focus:border-[#e53935] focus:outline-none transition-colors"
+                />
+              </div>
+
+              {/* E-Mail */}
+              <div>
+                <label className="block text-black [font-family:'Roboto',Helvetica] text-sm mb-2">
+                  E-Mail*
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full border-b-2 border-gray-300 bg-transparent pb-2 text-black focus:border-[#e53935] focus:outline-none transition-colors"
+                />
+              </div>
+
+              {/* Nachricht */}
+              <div>
+                <label className="block text-black [font-family:'Roboto',Helvetica] text-sm mb-2">
+                  Nachricht
+                </label>
+                <textarea
+                  name="nachricht"
+                  value={formData.nachricht}
+                  onChange={handleInputChange}
+                  rows={6}
+                  className="w-full border-2 border-gray-300 rounded-lg p-3 text-black focus:border-[#e53935] focus:outline-none transition-colors resize-none"
+                  placeholder=""
+                />
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full bg-[#e53935] text-white py-4 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-lg hover:bg-[#c62828] transition-colors"
+            >
+              ABSENDEN
             </button>
-          </div>
+          </form>
         </div>
 
         {/* Complete Footer Section - Same as front page */}
