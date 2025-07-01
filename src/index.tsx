@@ -5,6 +5,7 @@ import { MobileStart } from "./screens/MobileStart";
 import { Referenzen } from "./screens/Referenzen";
 import { Leistungen } from "./screens/Leistungen";
 import { Kontakt } from "./screens/Kontakt";
+import { Unternehmen } from "./screens/Unternehmen";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/referenzen" element={<Referenzen />} />
         <Route path="/leistungen" element={<Leistungen />} />
         <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/unternehmen" element={<Unternehmen />} />
       </Routes>
     </Router>
   </StrictMode>,
