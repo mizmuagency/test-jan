@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, ChevronUp, Menu, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronUp, Menu, X, FacebookIcon, InstagramIcon, MessageCircle, MapPin, Phone, Mail } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -262,36 +262,85 @@ export const Referenzen = (): JSX.Element => {
           ))}
         </div>
 
-        {/* Footer */}
-        <div className="bg-[#262a28] px-6 py-12 mt-8">
-          <div className="text-center">
-            <Link to="/" className="inline-block mb-4">
-              <img
-                src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
-                alt="J.A.N. BAU"
-                className="w-16 h-16 mx-auto"
-              />
-            </Link>
-            <div className="text-white [font-family:'Roboto',Helvetica] font-bold text-lg mb-8">
+        {/* Complete Footer Section - Same as front page */}
+        <div className="w-full bg-[#262a28] px-6 sm:px-8 py-12 sm:py-16">
+          {/* Company logo and name - left aligned */}
+          <div className="flex flex-col items-start mb-6 sm:mb-8">
+            <img
+              className="w-20 h-[70px] sm:w-24 sm:h-[88px] object-cover mb-3 sm:mb-4"
+              alt="Jan bau"
+              src="/jan-bau-1.png"
+            />
+            <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-lg sm:text-[23px] tracking-[0] leading-[40px] sm:leading-[57.5px] text-left">
               J.A.N. BAU GmbH
             </div>
-            
-            {/* Footer Navigation */}
-            <div className="space-y-2 mb-8">
-              {mainNavItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className="block text-white [font-family:'Roboto',Helvetica] text-sm hover:text-[#e53935] transition-colors"
-                >
-                  {item.name}
-                </Link>
-              ))}
+          </div>
+
+          {/* Company description */}
+          <div className="mb-8 sm:mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px]">
+            Wir sind ein Unternehmen der Bauindustrie im Bereich Trockenes,
+            Akustik und Spachtelarbeiten. Unser Leistungsspektrum umfasst die
+            gesamte Trockenbau, Akustik, Brandschutz und Schallschutz,
+            Türmontagen, Abbruch und Entsorgung sowie Spachtelarbeiten.
+          </div>
+
+          {/* Social media icons */}
+          <div className="flex gap-8 sm:gap-12 mb-8 sm:mb-12">
+            <FacebookIcon className="w-10 h-10 sm:w-12 sm:h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+            <InstagramIcon className="w-10 h-10 sm:w-12 sm:h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+            <MessageCircle className="w-10 h-10 sm:w-12 sm:h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+          </div>
+
+          {/* Contact information */}
+          <div className="mb-8 sm:mb-12">
+            <div className="mb-4 sm:mb-6 text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-lg sm:text-xl tracking-[0] leading-[22px]">
+              KONTAKT
             </div>
 
-            <div className="text-white text-xs [font-family:'Roboto',Helvetica]">
-              © J.A.N Bau GmbH. Alle Rechte vorbehalten.
+            {/* Address */}
+            <div className="flex items-start gap-3 mb-3 sm:mb-4">
+              <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-white flex-shrink-0 mt-0.5" />
+              <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px]">
+                Tödistrasse 2, 8854 Siebnen
+              </div>
             </div>
+
+            {/* Phone */}
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white flex-shrink-0" />
+              <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px]">
+                +41 76 220 46 53
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center gap-3 mb-6 sm:mb-8">
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white flex-shrink-0" />
+              <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px]">
+                info@jan-bau.ch
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div className="mb-8 sm:mb-12">
+            <div className="mb-3 sm:mb-4 [font-family:'Roboto',Helvetica] font-bold text-[#f84646] text-lg sm:text-xl tracking-[0] leading-[22px]">
+              Navigation
+            </div>
+            <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px] space-y-1">
+              <Link to="/" className="block hover:text-[#e53935] transition-colors">Startseite</Link>
+              <Link to="/referenzen" className="block hover:text-[#e53935] transition-colors">Referenzen</Link>
+              <Link to="/leistungen" className="block hover:text-[#e53935] transition-colors">Leistungen</Link>
+              <Link to="/unternehmen" className="block hover:text-[#e53935] transition-colors">Unternehmen</Link>
+              <Link to="/kontakt" className="block hover:text-[#e53935] transition-colors">Kontakt</Link>
+              <Link to="/datenschutz" className="block hover:text-[#e53935] transition-colors">Datenschutz</Link>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-xs sm:text-base tracking-[0] leading-[24px] sm:leading-[30px]">
+            ©&nbsp;&nbsp;J.A.N Bau GmbH. Alle Rechte vorbehalten. Webseite
+            Design: mizmu.ch
           </div>
         </div>
       </div>
