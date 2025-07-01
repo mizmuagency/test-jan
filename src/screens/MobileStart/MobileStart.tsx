@@ -86,62 +86,70 @@ export const MobileStart = (): JSX.Element => {
               </p>
             </div>
           </div>
+        </main>
 
-          {/* Service Cards Grid - Full Width Dark Section */}
-          <div className="w-full bg-[#3a3a3a] py-16">
-            <div className="max-w-7xl mx-auto px-8">
-              <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
-                {serviceCards.map((card, index) => (
-                  <Link
-                    key={index}
-                    to={card.path}
-                    className="aspect-square relative rounded-lg overflow-hidden block group"
-                  >
-                    <div className="absolute inset-0 bg-[url(/screenshot-2025-06-16-at-18-18-24-1-3.png)] bg-cover bg-center rounded-lg" />
-                    <div className="absolute inset-0 bg-[#e53935] bg-opacity-80 rounded-lg group-hover:bg-opacity-90 transition-all" />
-                    <div className="absolute inset-0 flex items-center justify-center p-4">
-                      <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-2xl text-center tracking-wide">
-                        {card.title}
-                      </div>
+        {/* Service Cards Grid - Full Width Dark Section */}
+        <div className="w-full bg-[#3a3a3a] py-16">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
+              {serviceCards.map((card, index) => (
+                <Link
+                  key={index}
+                  to={card.path}
+                  className="aspect-square relative rounded-lg overflow-hidden block group"
+                >
+                  <div className="absolute inset-0 bg-[url(/screenshot-2025-06-16-at-18-18-24-1-3.png)] bg-cover bg-center rounded-lg" />
+                  <div className="absolute inset-0 bg-[#e53935] bg-opacity-80 rounded-lg group-hover:bg-opacity-90 transition-all" />
+                  <div className="absolute inset-0 flex items-center justify-center p-4">
+                    <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-2xl text-center tracking-wide">
+                      {card.title}
                     </div>
-                  </Link>
-                ))}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom CTA Section - Full Width Dark Background */}
+        <div className="w-full bg-[#3a3a3a] py-16">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="flex items-center justify-between">
+              {/* Left side - Text content */}
+              <div className="flex-1">
+                <h3 className="text-4xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-2">
+                  Einen Traum
+                </h3>
+                <h3 className="text-4xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-2">
+                  zu bauen
+                </h3>
+                <h3 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-2">
+                  sollte kein
+                </h3>
+                <h3 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-8">
+                  Albtraum sein!
+                </h3>
+              </div>
+              
+              {/* Right side - Description and button */}
+              <div className="flex-1 pl-16">
+                <p className="text-white [font-family:'Roboto',Helvetica] text-lg mb-2">
+                  Kontaktieren Sie uns,
+                </p>
+                <p className="text-white [font-family:'Roboto',Helvetica] text-lg mb-2">
+                  wenn auch Sie Ihren Traum
+                </p>
+                <p className="text-white [font-family:'Roboto',Helvetica] text-lg mb-8">
+                  verwirklichen wollen.
+                </p>
+                
+                <Button className="bg-[#e53935] text-white px-8 py-4 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-lg hover:bg-[#c62828] transition-colors">
+                  ANFRAGE STARTEN
+                </Button>
               </div>
             </div>
           </div>
-
-          <div className="max-w-7xl mx-auto px-8 py-16">
-            {/* Bottom CTA Section */}
-            <div className="text-center">
-              <h3 className="text-4xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-2">
-                Einen Traum
-              </h3>
-              <h3 className="text-4xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-2">
-                zu bauen
-              </h3>
-              <h3 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
-                sollte kein
-              </h3>
-              <h3 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
-                Albtraum sein!
-              </h3>
-              
-              <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-lg mb-2 max-w-md mx-auto">
-                Kontaktieren Sie uns, und
-              </p>
-              <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-lg mb-8 max-w-md mx-auto">
-                lassen Sie uns Ihren Traum
-              </p>
-              <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-lg mb-8 max-w-md mx-auto">
-                verwirklichen.
-              </p>
-              
-              <Button className="bg-[#e53935] text-white px-8 py-4 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-lg hover:bg-[#c62828] transition-colors">
-                ANFRAGE STARTEN
-              </Button>
-            </div>
-          </div>
-        </main>
+        </div>
       </div>
 
       {/* Mobile Layout - Keep existing mobile design */}
