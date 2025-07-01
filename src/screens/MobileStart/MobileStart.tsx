@@ -111,8 +111,8 @@ export const MobileStart = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Bottom CTA Section - Full Width Dark Background */}
-        <div className="w-full bg-[#3a3a3a] py-16">
+        {/* White CTA Section */}
+        <div className="w-full bg-white py-16">
           <div className="max-w-7xl mx-auto px-8">
             <div className="flex items-center justify-between">
               {/* Left side - Text content */}
@@ -123,23 +123,23 @@ export const MobileStart = (): JSX.Element => {
                 <h3 className="text-4xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-2">
                   zu bauen
                 </h3>
-                <h3 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-2">
+                <h3 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
                   sollte kein
                 </h3>
-                <h3 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-8">
+                <h3 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
                   Albtraum sein!
                 </h3>
               </div>
               
               {/* Right side - Description and button */}
               <div className="flex-1 pl-16">
-                <p className="text-white [font-family:'Roboto',Helvetica] text-lg mb-2">
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg mb-2">
                   Kontaktieren Sie uns,
                 </p>
-                <p className="text-white [font-family:'Roboto',Helvetica] text-lg mb-2">
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg mb-2">
                   wenn auch Sie Ihren Traum
                 </p>
-                <p className="text-white [font-family:'Roboto',Helvetica] text-lg mb-8">
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg mb-8">
                   verwirklichen wollen.
                 </p>
                 
@@ -147,6 +147,90 @@ export const MobileStart = (): JSX.Element => {
                   ANFRAGE STARTEN
                 </Button>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Footer Section */}
+        <div className="w-full bg-[#262a28] px-8 py-16">
+          <div className="max-w-7xl mx-auto">
+            {/* Company logo and name - left aligned */}
+            <div className="flex flex-col items-start mb-8">
+              <img
+                className="w-24 h-[88px] object-cover mb-4"
+                alt="Jan bau"
+                src="/jan-bau-1.png"
+              />
+              <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-left">
+                J.A.N. BAU GmbH
+              </div>
+            </div>
+
+            {/* Company description */}
+            <div className="mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] max-w-3xl">
+              Wir sind ein Unternehmen der Bauindustrie im Bereich Trockenes,
+              Akustik und Spachtelarbeiten. Unser Leistungsspektrum umfasst die
+              gesamte Trockenbau, Akustik, Brandschutz und Schallschutz,
+              Türmontagen, Abbruch und Entsorgung sowie Spachtelarbeiten.
+            </div>
+
+            {/* Social media icons */}
+            <div className="flex gap-12 mb-12">
+              <FacebookIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+              <InstagramIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+              <WhatsAppIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+            </div>
+
+            {/* Contact information */}
+            <div className="mb-12">
+              <div className="mb-6 text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-xl tracking-[0] leading-[22px]">
+                KONTAKT
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  Tödistrasse 2, 8854 Siebnen
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-center gap-3 mb-4">
+                <Phone className="w-6 h-6 text-white flex-shrink-0" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  +41 76 220 46 53
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center gap-3 mb-8">
+                <Mail className="w-6 h-6 text-white flex-shrink-0" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  info@jan-bau.ch
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="mb-12">
+              <div className="mb-4 [font-family:'Roboto',Helvetica] font-bold text-[#f84646] text-xl tracking-[0] leading-[22px]">
+                Navigation
+              </div>
+              <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] space-y-1">
+                <Link to="/" className="block hover:text-[#e53935] transition-colors">Startseite</Link>
+                <Link to="/referenzen" className="block hover:text-[#e53935] transition-colors">Referenzen</Link>
+                <Link to="/leistungen" className="block hover:text-[#e53935] transition-colors">Leistungen</Link>
+                <Link to="/unternehmen" className="block hover:text-[#e53935] transition-colors">Unternehmen</Link>
+                <Link to="/kontakt" className="block hover:text-[#e53935] transition-colors">Kontakt</Link>
+                <Link to="/datenschutz" className="block hover:text-[#e53935] transition-colors">Datenschutz</Link>
+              </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[30px]">
+              ©&nbsp;&nbsp;J.A.N Bau GmbH. Alle Rechte vorbehalten. Webseite
+              Design: mizmu.ch
             </div>
           </div>
         </div>
