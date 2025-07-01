@@ -166,12 +166,14 @@ export const MobileStart = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Company description */}
+            {/* Company description with proper line breaks */}
             <div className="mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] max-w-3xl">
-              Wir sind ein Unternehmen der Bauindustrie im Bereich Trockenes,
-              Akustik und Spachtelarbeiten. Unser Leistungsspektrum umfasst die
-              gesamte Trockenbau, Akustik, Brandschutz und Schallschutz,
-              Türmontagen, Abbruch und Entsorgung sowie Spachtelarbeiten.
+              Wir sind ein Unternehmen der Bauindustrie im<br />
+              Bereich Trockenes, Akustik und Spachtelarbeiten.<br />
+              Unser Leistungsspektrum umfasst die gesamte<br />
+              Trockenbau, Akustik, Brandschutz und<br />
+              Schallschutz, Türmontagen, Abbruch und<br />
+              Entsorgung sowie Spachtelarbeiten.
             </div>
 
             {/* Social media icons */}
@@ -362,12 +364,14 @@ export const MobileStart = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Company description */}
+          {/* Company description with proper line breaks for mobile */}
           <div className="mb-8 sm:mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px]">
-            Wir sind ein Unternehmen der Bauindustrie im Bereich Trockenes,
-            Akustik und Spachtelarbeiten. Unser Leistungsspektrum umfasst die
-            gesamte Trockenbau, Akustik, Brandschutz und Schallschutz,
-            Türmontagen, Abbruch und Entsorgung sowie Spachtelarbeiten.
+            Wir sind ein Unternehmen der Bauindustrie im<br />
+            Bereich Trockenes, Akustik und Spachtelarbeiten.<br />
+            Unser Leistungsspektrum umfasst die gesamte<br />
+            Trockenbau, Akustik, Brandschutz und<br />
+            Schallschutz, Türmontagen, Abbruch und<br />
+            Entsorgung sowie Spachtelarbeiten.
           </div>
 
           {/* Social media icons */}
