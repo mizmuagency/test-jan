@@ -122,7 +122,7 @@ export const Unternehmen = (): JSX.Element => {
 
         {/* Title Section */}
         <div className="px-6 py-8 bg-white">
-          <h1 className="text-3xl sm:text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
             UNTERNEHMEN
           </h1>
           
@@ -144,7 +144,7 @@ export const Unternehmen = (): JSX.Element => {
 
         {/* Team Section - Dark Background */}
         <div className="bg-[#3a3a3a] px-6 py-8">
-          <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-6">
             PERSONEN
           </h2>
           
@@ -224,7 +224,7 @@ export const Unternehmen = (): JSX.Element => {
 
         {/* Company History Section */}
         <div className="px-6 py-8 bg-white">
-          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
             UNSERE GESCHICHTE
           </h2>
           
@@ -245,7 +245,7 @@ export const Unternehmen = (): JSX.Element => {
 
         {/* Company Vision Section */}
         <div className="px-6 py-8 bg-white">
-          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
             UNSERE VISION
           </h2>
           
@@ -258,13 +258,13 @@ export const Unternehmen = (): JSX.Element => {
 
         {/* Services Overview Section */}
         <div className="px-6 py-8 bg-white">
-          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
             Was umfasst
           </h2>
-          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
             unser <span className="text-[#e53935]">Leistungs-</span>
           </h2>
-          <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
             <span className="text-[#e53935]">spektrum?</span>
           </h2>
           
