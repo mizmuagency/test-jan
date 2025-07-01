@@ -37,7 +37,111 @@ export const MobileStart = (): JSX.Element => {
 
   return (
     <div className="bg-white w-full min-h-screen">
-      <div className="bg-white max-w-md mx-auto relative min-h-screen">
+      {/* Desktop Layout */}
+      <div className="hidden lg:block">
+        {/* Desktop Header */}
+        <header className="bg-white px-8 py-4">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            {/* Logo */}
+            <Link to="/" className="w-12 h-12">
+              <img
+                src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
+                alt="J.A.N. BAU Home"
+                className="w-full h-full object-contain"
+              />
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <nav className="flex space-x-8">
+              {mainNavItems.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className="text-black [font-family:'Roboto',Helvetica] font-medium text-sm hover:text-[#e53935] transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </header>
+
+        {/* Desktop Main Content */}
+        <main className="bg-white">
+          <div className="max-w-7xl mx-auto px-8 py-16">
+            {/* Hero Section */}
+            <div className="text-center mb-16">
+              <h1 className="text-6xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-4">
+                J.A.N BAU GmbH
+              </h1>
+              <h2 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                IHR TROCKENBAU
+              </h2>
+              <h2 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
+                SPEZIALIST
+              </h2>
+              
+              <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-lg max-w-md mx-auto">
+                Wir glauben an guter Handwerkskunst ist heute heute noch nie einen schlechteren.
+              </p>
+            </div>
+
+            {/* Service Cards Grid - 2x2 */}
+            <div className="bg-[#3a3a3a] p-8 rounded-lg mb-16">
+              <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
+                {serviceCards.map((card, index) => (
+                  <Link
+                    key={index}
+                    to={card.path}
+                    className="aspect-square relative rounded-lg overflow-hidden block group"
+                  >
+                    <div className="absolute inset-0 bg-[url(/screenshot-2025-06-16-at-18-18-24-1-3.png)] bg-cover bg-center rounded-lg" />
+                    <div className="absolute inset-0 bg-[#e53935] bg-opacity-80 rounded-lg group-hover:bg-opacity-90 transition-all" />
+                    <div className="absolute inset-0 flex items-center justify-center p-4">
+                      <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-2xl text-center tracking-wide">
+                        {card.title}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom CTA Section */}
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-2">
+                Einen Traum
+              </h3>
+              <h3 className="text-4xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-2">
+                zu bauen
+              </h3>
+              <h3 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                sollte kein
+              </h3>
+              <h3 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
+                Albtraum sein!
+              </h3>
+              
+              <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-lg mb-2 max-w-md mx-auto">
+                Kontaktieren Sie uns, und
+              </p>
+              <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-lg mb-8 max-w-md mx-auto">
+                lassen Sie uns Ihren Traum
+              </p>
+              <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-lg mb-8 max-w-md mx-auto">
+                verwirklichen.
+              </p>
+              
+              <Button className="bg-[#e53935] text-white px-8 py-4 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-lg hover:bg-[#c62828] transition-colors">
+                ANFRAGE STARTEN
+              </Button>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      {/* Mobile Layout - Keep existing mobile design */}
+      <div className="lg:hidden bg-white max-w-md mx-auto relative min-h-screen">
         {/* Home Logo Button - Top Left - Hidden when menu is open */}
         {!isMenuOpen && (
           <button
