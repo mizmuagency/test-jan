@@ -150,6 +150,156 @@ export const MobileStart = (): JSX.Element => {
             </div>
           </div>
         </div>
+
+        {/* White Section with Company Information */}
+        <div className="w-full bg-white py-16">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="grid grid-cols-2 gap-16">
+              {/* Left Column - Company History */}
+              <div>
+                <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
+                  UNSERE GESCHICHTE
+                </h2>
+                
+                <div className="space-y-6 text-gray-700 [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                  <p>
+                    Firmengründer Nazmin ist im Bauhandwerk aufgewachsen und entwickelte früh ein Gespür für Präzision, Tiefe und Verlässlichkeit. Aufmerksam, analytisch, mitdenkend – das gehört von Anfang an dazu.
+                  </p>
+                  
+                  <p>
+                    Nach dem Abschluss als Bauzeichner führte ihn sein Weg über die Baustelle in Richtung Zusammenarbeit mit Frau Amina Hrnijic führt er erfolgreich die J.A.N. GmbH und kann somit auf Heller und Gipser sein Wissen und seine Leidenschaft täglich einbringen.
+                  </p>
+                  
+                  <p>
+                    Bis heute prägt diese familiäre Führung unsere Arbeit. Wir verstehen uns als echter Partner unserer Kunden und arbeiten mit handwerklicher Qualität, Zuverlässigkeit und dem Anspruch, jedes Projekt mit Sorgfalt und Herz umzusetzen.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column - Company Vision */}
+              <div>
+                <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
+                  UNSERE VISION
+                </h2>
+                
+                <div className="space-y-6 text-gray-700 [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                  <p>
+                    Wir möchten, dass unsere Arbeit sichtbar bleibt – in Form von Qualität, die überzeugt. Unser Ziel ist es, weiter zu wachsen, und dabei mit unsere familiären Werte und unseren hohen Anspruch an unsere Leistungen und die Qualität aus den Augen zu verlieren.
+                  </p>
+                </div>
+
+                {/* Services Section */}
+                <div className="mt-12">
+                  <h3 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                    Was umfasst
+                  </h3>
+                  <h3 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                    unser <span className="text-[#e53935]">Leistungs-</span>
+                  </h3>
+                  <h3 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+                    <span className="text-[#e53935]">spektrum?</span>
+                  </h3>
+                  
+                  <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-base leading-relaxed mb-8">
+                    Nebst klassischem und modernem Trockenbau, sind wir in weiteren Disziplinen Spezialisten. Hier erfahren Sie konkret worin.
+                  </p>
+                  
+                  <Link
+                    to="/leistungen"
+                    className="inline-block bg-[#e53935] text-white px-8 py-4 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-lg hover:bg-[#c62828] transition-colors"
+                  >
+                    ZU UNSEREN LEISTUNGEN
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Footer */}
+        <div className="w-full bg-[#262a28] px-8 py-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-3 gap-16">
+              {/* Company Info */}
+              <div>
+                <div className="flex flex-col items-start mb-8">
+                  <img
+                    className="w-24 h-[88px] object-cover mb-4"
+                    alt="Jan bau"
+                    src="/jan-bau-1.png"
+                  />
+                  <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-left">
+                    J.A.N. BAU GmbH
+                  </div>
+                </div>
+
+                <div className="mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  Wir sind ein Unternehmen der Bauindustrie im Bereich Trockenes,
+                  Akustik und Spachtelarbeiten. Unser Leistungsspektrum umfasst die
+                  gesamte Trockenbau, Akustik, Brandschutz und Schallschutz,
+                  Türmontagen, Abbruch und Entsorgung sowie Spachtelarbeiten.
+                </div>
+
+                <div className="flex gap-6">
+                  <FacebookIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+                  <InstagramIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+                  <WhatsAppIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div>
+                <div className="mb-6 text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-xl tracking-[0] leading-[22px]">
+                  KONTAKT
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
+                    <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                      Tödistrasse 2, 8854 Siebnen
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-6 h-6 text-white flex-shrink-0" />
+                    <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                      +41 76 220 46 53
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-6 h-6 text-white flex-shrink-0" />
+                    <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                      info@jan-bau.ch
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation */}
+              <div>
+                <div className="mb-4 [font-family:'Roboto',Helvetica] font-bold text-[#f84646] text-xl tracking-[0] leading-[22px]">
+                  Navigation
+                </div>
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] space-y-2">
+                  <Link to="/" className="block hover:text-[#e53935] transition-colors">Startseite</Link>
+                  <Link to="/referenzen" className="block hover:text-[#e53935] transition-colors">Referenzen</Link>
+                  <Link to="/leistungen" className="block hover:text-[#e53935] transition-colors">Leistungen</Link>
+                  <Link to="/unternehmen" className="block hover:text-[#e53935] transition-colors">Unternehmen</Link>
+                  <Link to="/kontakt" className="block hover:text-[#e53935] transition-colors">Kontakt</Link>
+                  <Link to="/datenschutz" className="block hover:text-[#e53935] transition-colors">Datenschutz</Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="mt-12 pt-8 border-t border-gray-600 [font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[30px]">
+              ©&nbsp;&nbsp;J.A.N Bau GmbH. Alle Rechte vorbehalten. Webseite
+              Design: mizmu.ch
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Mobile Layout - Keep existing mobile design */}
