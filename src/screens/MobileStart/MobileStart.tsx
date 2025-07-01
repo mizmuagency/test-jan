@@ -85,9 +85,11 @@ export const MobileStart = (): JSX.Element => {
                 Wir glauben an guter Handwerkskunst ist heute heute noch nie einen schlechteren.
               </p>
             </div>
+          </div>
 
-            {/* Service Cards Grid - 2x2 */}
-            <div className="bg-[#3a3a3a] p-8 rounded-lg mb-16">
+          {/* Service Cards Grid - Full Width Dark Section */}
+          <div className="w-full bg-[#3a3a3a] py-16">
+            <div className="max-w-7xl mx-auto px-8">
               <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
                 {serviceCards.map((card, index) => (
                   <Link
@@ -106,7 +108,9 @@ export const MobileStart = (): JSX.Element => {
                 ))}
               </div>
             </div>
+          </div>
 
+          <div className="max-w-7xl mx-auto px-8 py-16">
             {/* Bottom CTA Section */}
             <div className="text-center">
               <h3 className="text-4xl font-bold text-[#e53935] [font-family:'Roboto',Helvetica] mb-2">
@@ -212,9 +216,9 @@ export const MobileStart = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Navigation section with red cards - 2x2 Grid - Moved down by 40px total */}
-        <div className="w-full bg-[#262a28] px-4 py-6 sm:py-8 mt-10">
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm mx-auto">
+        {/* Navigation section with red cards - 2x2 Grid - Full width dark background */}
+        <div className="w-full bg-[#262a28] py-6 sm:py-8 mt-10">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm mx-auto px-4">
             {serviceCards.map((card, index) => (
               <Link
                 key={index}
