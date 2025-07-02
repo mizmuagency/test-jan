@@ -181,16 +181,16 @@ export const Leistungen = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Pre-footer Section - Matching the screenshot */}
-            <div className="bg-[#f8f8f8] py-20 px-12 rounded-lg">
+            {/* Pre-footer Section - No background box, larger title */}
+            <div className="py-20">
               <div className="max-w-2xl">
-                <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                <h2 className="text-6xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
                   Wir wissen, was
                 </h2>
-                <h2 className="text-4xl font-bold [font-family:'Roboto',Helvetica] mb-2">
+                <h2 className="text-6xl font-bold [font-family:'Roboto',Helvetica] mb-2">
                   <span className="text-[#e53935]">Ihre Bedürfnisse</span>
                 </h2>
-                <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
+                <h2 className="text-6xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
                   sind!
                 </h2>
                 
@@ -462,16 +462,16 @@ export const Leistungen = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Mobile Pre-footer Section - Light Background */}
-        <div className="w-full bg-[#f8f8f8] px-6 py-12">
+        {/* Mobile Pre-footer Section - No background box, larger title */}
+        <div className="w-full px-6 py-12">
           <div className="max-w-sm">
-            <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+            <h2 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
               Wir wissen, was
             </h2>
-            <h2 className="text-2xl font-bold [font-family:'Roboto',Helvetica] mb-2">
+            <h2 className="text-3xl font-bold [font-family:'Roboto',Helvetica] mb-2">
               <span className="text-[#e53935]">Ihre Bedürfnisse</span>
             </h2>
-            <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+            <h2 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
               sind!
             </h2>
             
