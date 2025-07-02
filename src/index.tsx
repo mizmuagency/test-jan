@@ -6,7 +6,6 @@ import { Referenzen } from "./screens/Referenzen";
 import { Leistungen } from "./screens/Leistungen";
 import { Kontakt } from "./screens/Kontakt";
 import { Unternehmen } from "./screens/Unternehmen";
-import { Blog } from "./screens/Blog";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -17,7 +16,6 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/leistungen" element={<Leistungen />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/unternehmen" element={<Unternehmen />} />
-        <Route path="/blog" element={<Blog />} />
       </Routes>
     </Router>
   </StrictMode>,
