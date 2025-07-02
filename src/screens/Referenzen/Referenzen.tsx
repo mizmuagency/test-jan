@@ -281,32 +281,6 @@ export const Referenzen = (): JSX.Element => {
                           </div>
                         </div>
                       </div>
-
-                      {/* Additional Images Gallery - Only show if multiple images */}
-                      {project.images.length > 1 && (
-                        <div className="px-4 pb-4">
-                          <div className="grid grid-cols-4 gap-2">
-                            {project.images.map((image, imgIndex) => (
-                              <button
-                                key={imgIndex}
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  setCurrentImageIndex(imgIndex);
-                                }}
-                                className={`relative h-16 overflow-hidden rounded transition-all ${
-                                  currentImageIndex === imgIndex ? 'ring-2 ring-[#e53935]' : 'opacity-70 hover:opacity-100'
-                                }`}
-                              >
-                                <img
-                                  src={image}
-                                  alt={`${project.title} - Image ${imgIndex + 1}`}
-                                  className="w-full h-full object-cover filter grayscale"
-                                />
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      )}
                     </div>
                   )}
                 </div>
