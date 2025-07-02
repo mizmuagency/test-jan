@@ -54,35 +54,35 @@ export const Unternehmen = (): JSX.Element => {
       position: "Funktion",
       phone: "T: +41 76 310 27 09",
       email: "vorna.name@jan-bau.ch",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
     },
     {
       name: "Amina Hrnijic", 
       position: "Funktion",
       phone: "T: +41 76 310 27 09",
       email: "vorna.name@jan-bau.ch",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
     },
     {
       name: "Naim Hrnijic",
       position: "Funktion", 
       phone: "T: +41 76 310 27 09",
       email: "vorna.name@jan-bau.ch",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
     },
     {
       name: "Kjenan Misinii",
       position: "Funktion",
       phone: "T: +41 76 310 27 09", 
       email: "vorna.name@jan-bau.ch",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
     },
     {
       name: "Felix Bärtschiger",
       position: "Funktion",
       phone: "T: +41 76 310 27 09",
       email: "vorna.name@jan-bau.ch", 
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
     }
   ];
 
@@ -173,20 +173,20 @@ export const Unternehmen = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Persons Section - Dark Background matching screenshot */}
-            <div className="bg-[#3a3a3a] rounded-lg p-12 mb-16">
-              <h2 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-12 tracking-wide">
+            {/* Persons Section - Dark Background matching screenshot exactly */}
+            <div className="bg-[#3a3a3a] rounded-lg p-16 mb-16">
+              <h2 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-16 tracking-wide">
                 PERSONEN
               </h2>
               
-              {/* Team Grid - 2 on top, 3 on bottom */}
-              <div className="space-y-8">
-                {/* Top Row - 2 people */}
-                <div className="grid grid-cols-2 gap-12 justify-center max-w-2xl mx-auto">
+              {/* Team Grid - 2 on top, 3 on bottom - Much larger images, closer spacing */}
+              <div className="space-y-12">
+                {/* Top Row - 2 people - Closer together */}
+                <div className="flex justify-center gap-16">
                   {desktopTeamMembers.slice(0, 2).map((member, index) => (
                     <div key={index} className="text-center">
-                      {/* Profile Picture - Circular */}
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                      {/* Profile Picture - Much larger circular images */}
+                      <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden">
                         <img
                           src={member.image}
                           alt={member.name}
@@ -195,12 +195,12 @@ export const Unternehmen = (): JSX.Element => {
                       </div>
                       
                       {/* Name */}
-                      <h3 className="text-white [font-family:'Roboto',Helvetica] font-bold text-base mb-1">
+                      <h3 className="text-white [font-family:'Roboto',Helvetica] font-bold text-lg mb-2">
                         {member.name}
                       </h3>
                       
                       {/* Position */}
-                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-sm mb-2">
+                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-base mb-3">
                         {member.position}
                       </p>
                       
@@ -217,12 +217,12 @@ export const Unternehmen = (): JSX.Element => {
                   ))}
                 </div>
                 
-                {/* Bottom Row - 3 people */}
-                <div className="grid grid-cols-3 gap-8 justify-center max-w-3xl mx-auto">
+                {/* Bottom Row - 3 people - Closer together */}
+                <div className="flex justify-center gap-12">
                   {desktopTeamMembers.slice(2, 5).map((member, index) => (
                     <div key={index + 2} className="text-center">
-                      {/* Profile Picture - Circular */}
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                      {/* Profile Picture - Much larger circular images */}
+                      <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden">
                         <img
                           src={member.image}
                           alt={member.name}
@@ -231,12 +231,12 @@ export const Unternehmen = (): JSX.Element => {
                       </div>
                       
                       {/* Name */}
-                      <h3 className="text-white [font-family:'Roboto',Helvetica] font-bold text-base mb-1">
+                      <h3 className="text-white [font-family:'Roboto',Helvetica] font-bold text-lg mb-2">
                         {member.name}
                       </h3>
                       
                       {/* Position */}
-                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-sm mb-2">
+                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-base mb-3">
                         {member.position}
                       </p>
                       
