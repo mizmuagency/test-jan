@@ -247,44 +247,44 @@ export const Referenzen = (): JSX.Element => {
                   {/* Expanded Project Details - Same background color as main background */}
                   {expandedProject === project.id && (
                     <div className="bg-[#262a28] rounded-lg overflow-hidden">
-                      {/* Project Details Table - Exact spacing and formatting from screenshot */}
-                      <div className="p-6">
-                        <div className="space-y-4">
+                      {/* Project Details Table - Reduced spacing and line height */}
+                      <div className="p-4">
+                        <div className="space-y-1">
                           {/* Objekt */}
-                          <div className="flex justify-between items-center py-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Objekt</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.objekt}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Objekt</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.objekt}</span>
                           </div>
                           
                           {/* Ort */}
-                          <div className="flex justify-between items-center py-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Ort</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.ort}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Ort</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.ort}</span>
                           </div>
                           
                           {/* Auftraggeber */}
-                          <div className="flex justify-between items-center py-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Auftraggeber</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.auftraggeber}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Auftraggeber</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.auftraggeber}</span>
                           </div>
                           
                           {/* Auftrag */}
-                          <div className="flex justify-between items-center py-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Auftrag</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.auftrag}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Auftrag</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.auftrag}</span>
                           </div>
                           
                           {/* Jahr */}
-                          <div className="flex justify-between items-center py-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Jahr</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.jahr}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Jahr</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.jahr}</span>
                           </div>
                         </div>
                       </div>
 
                       {/* Additional Images Gallery - Only show if multiple images */}
                       {project.images.length > 1 && (
-                        <div className="px-6 pb-6">
+                        <div className="px-4 pb-4">
                           <div className="grid grid-cols-4 gap-2">
                             {project.images.map((image, imgIndex) => (
                               <button
