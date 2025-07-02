@@ -191,12 +191,12 @@ export const Referenzen = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Projects Grid - Compact 2x2 Grid matching screenshot exactly */}
-            <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {/* Projects Grid - Two Columns */}
+            <div className="grid grid-cols-2 gap-8">
               {projects.map((project, index) => (
-                <div key={project.id} className="mb-4">
-                  {/* Project Image Container - Small square matching screenshot */}
-                  <div className="relative w-48 h-48 mx-auto overflow-hidden rounded-lg mb-3">
+                <div key={project.id} className="mb-8">
+                  {/* Project Image Container - Square aspect ratio */}
+                  <div className="relative aspect-square overflow-hidden rounded-lg mb-4">
                     <img
                       src={project.images[expandedProject === project.id ? currentImageIndex : 0]}
                       alt={project.title}
@@ -204,7 +204,7 @@ export const Referenzen = (): JSX.Element => {
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                     
-                    {/* Navigation arrows for image carousel when expanded */}
+                    {/* Navigation arrows for image carousel when expanded - Within image boundaries */}
                     {expandedProject === project.id && project.images.length > 1 && (
                       <>
                         <button
@@ -212,33 +212,33 @@ export const Referenzen = (): JSX.Element => {
                             e.stopPropagation();
                             prevImage();
                           }}
-                          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-1 rounded-full hover:bg-opacity-80 transition-all z-10"
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-2 rounded-full hover:bg-opacity-80 transition-all z-10"
                         >
-                          <ChevronLeft className="w-4 h-4" />
+                          <ChevronLeft className="w-5 h-5" />
                         </button>
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             nextImage();
                           }}
-                          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-1 rounded-full hover:bg-opacity-80 transition-all z-10"
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-2 rounded-full hover:bg-opacity-80 transition-all z-10"
                         >
-                          <ChevronRight className="w-4 h-4" />
+                          <ChevronRight className="w-5 h-5" />
                         </button>
                       </>
                     )}
                   </div>
 
-                  {/* Project Title and Toggle - Compact spacing */}
+                  {/* Project Title and Toggle */}
                   <div 
-                    className="flex justify-between items-center cursor-pointer py-1"
+                    className="flex justify-between items-center cursor-pointer py-3"
                     onClick={() => toggleProject(project.id)}
                   >
-                    <h3 className="text-lg font-bold text-white [font-family:'Roboto',Helvetica] tracking-wide">
+                    <h3 className="text-xl font-bold text-white [font-family:'Roboto',Helvetica] tracking-wide">
                       {project.title}
                     </h3>
                     <ChevronUp 
-                      className={`w-5 h-5 text-white transition-transform duration-300 ${
+                      className={`w-6 h-6 text-white transition-transform duration-300 ${
                         expandedProject === project.id ? 'rotate-180' : ''
                       }`}
                     />
@@ -246,38 +246,38 @@ export const Referenzen = (): JSX.Element => {
 
                   {/* Expanded Project Details - Same background color as main background */}
                   {expandedProject === project.id && (
-                    <div className="bg-[#262a28] rounded-lg overflow-hidden mt-2">
-                      {/* Project Details Table - Very compact spacing matching screenshot */}
-                      <div className="p-3">
-                        <div className="space-y-0.5">
+                    <div className="bg-[#262a28] rounded-lg overflow-hidden">
+                      {/* Project Details Table - Reduced spacing and line height */}
+                      <div className="p-4">
+                        <div className="space-y-1">
                           {/* Objekt */}
-                          <div className="flex justify-between items-center">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">Objekt</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">{project.details.objekt}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Objekt</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.objekt}</span>
                           </div>
                           
                           {/* Ort */}
-                          <div className="flex justify-between items-center">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">Ort</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">{project.details.ort}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Ort</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.ort}</span>
                           </div>
                           
                           {/* Auftraggeber */}
-                          <div className="flex justify-between items-center">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">Auftraggeber</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">{project.details.auftraggeber}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Auftraggeber</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.auftraggeber}</span>
                           </div>
                           
                           {/* Auftrag */}
-                          <div className="flex justify-between items-center">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">Auftrag</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">{project.details.auftrag}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Auftrag</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.auftrag}</span>
                           </div>
                           
                           {/* Jahr */}
-                          <div className="flex justify-between items-center">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">Jahr</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm">{project.details.jahr}</span>
+                          <div className="flex justify-between items-center py-1">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">Jahr</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-sm leading-tight">{project.details.jahr}</span>
                           </div>
                         </div>
                       </div>
