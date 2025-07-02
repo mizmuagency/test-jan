@@ -28,6 +28,7 @@ export const Referenzen = (): JSX.Element => {
       details: {
         objekt: "Geschäftshaus",
         ort: "8800 Zürich",
+        auftraggeber: "BH Immo AG",
         auftrag: "Brandschutz",
         jahr: "2024"
       }
@@ -42,6 +43,7 @@ export const Referenzen = (): JSX.Element => {
       details: {
         objekt: "Wohnkomplex",
         ort: "4000 Basel",
+        auftraggeber: "Basel Wohnen AG",
         auftrag: "Trockenbau",
         jahr: "2023"
       }
@@ -56,6 +58,7 @@ export const Referenzen = (): JSX.Element => {
       details: {
         objekt: "Bürokomplex",
         ort: "3000 Bern",
+        auftraggeber: "Bern Office GmbH",
         auftrag: "Akustikbau",
         jahr: "2023"
       }
@@ -70,6 +73,7 @@ export const Referenzen = (): JSX.Element => {
       details: {
         objekt: "Industriebau",
         ort: "6000 Luzern",
+        auftraggeber: "Luzern Industries",
         auftrag: "Spachtelarbeiten",
         jahr: "2024"
       }
@@ -227,57 +231,73 @@ export const Referenzen = (): JSX.Element => {
                     <h3 className="text-xl font-bold text-white [font-family:'Roboto',Helvetica]">
                       {project.title}
                     </h3>
-                    <ChevronDown 
+                    <ChevronUp 
                       className={`w-6 h-6 text-white transition-transform duration-300 ${
                         expandedProject === project.id ? 'rotate-180' : ''
                       }`}
                     />
                   </div>
 
-                  {/* Expanded Project Details */}
+                  {/* Expanded Project Details - Matching Screenshot Layout */}
                   {expandedProject === project.id && (
-                    <div className="bg-[#4a4a4a] p-6 rounded-lg mt-2 space-y-4">
-                      {/* Additional Images */}
+                    <div className="bg-[#2a2a2a] rounded-lg mt-2 overflow-hidden">
+                      {/* Project Details Table */}
+                      <div className="p-6">
+                        <div className="space-y-3">
+                          {/* Objekt */}
+                          <div className="flex justify-between items-center border-b border-gray-600 pb-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Objekt</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.objekt}</span>
+                          </div>
+                          
+                          {/* Ort */}
+                          <div className="flex justify-between items-center border-b border-gray-600 pb-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Ort</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.ort}</span>
+                          </div>
+                          
+                          {/* Auftraggeber */}
+                          <div className="flex justify-between items-center border-b border-gray-600 pb-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Auftraggeber</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.auftraggeber}</span>
+                          </div>
+                          
+                          {/* Auftrag */}
+                          <div className="flex justify-between items-center border-b border-gray-600 pb-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Auftrag</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.auftrag}</span>
+                          </div>
+                          
+                          {/* Jahr */}
+                          <div className="flex justify-between items-center">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Jahr</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.jahr}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Additional Images Gallery */}
                       {project.images.length > 1 && (
-                        <div className="mb-4">
-                          <img
-                            src={project.images[currentImageIndex]}
-                            alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                            className="w-full h-[200px] object-cover rounded-lg filter grayscale"
-                          />
-                          <div className="flex justify-center mt-2 space-x-2">
-                            {project.images.map((_, imgIndex) => (
+                        <div className="px-6 pb-6">
+                          <div className="grid grid-cols-3 gap-2">
+                            {project.images.map((image, imgIndex) => (
                               <button
                                 key={imgIndex}
                                 onClick={() => setCurrentImageIndex(imgIndex)}
-                                className={`w-2 h-2 rounded-full transition-colors ${
-                                  currentImageIndex === imgIndex ? 'bg-[#e53935]' : 'bg-gray-500'
+                                className={`relative h-20 overflow-hidden rounded transition-all ${
+                                  currentImageIndex === imgIndex ? 'ring-2 ring-[#e53935]' : ''
                                 }`}
-                              />
+                              >
+                                <img
+                                  src={image}
+                                  alt={`${project.title} - Image ${imgIndex + 1}`}
+                                  className="w-full h-full object-cover filter grayscale"
+                                />
+                              </button>
                             ))}
                           </div>
                         </div>
                       )}
-
-                      {/* Project Details */}
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="font-semibold text-gray-300">Objekt:</span>
-                          <p className="text-white">{project.details.objekt}</p>
-                        </div>
-                        <div>
-                          <span className="font-semibold text-gray-300">Ort:</span>
-                          <p className="text-white">{project.details.ort}</p>
-                        </div>
-                        <div>
-                          <span className="font-semibold text-gray-300">Auftrag:</span>
-                          <p className="text-white">{project.details.auftrag}</p>
-                        </div>
-                        <div>
-                          <span className="font-semibold text-gray-300">Jahr:</span>
-                          <p className="text-white">{project.details.jahr}</p>
-                        </div>
-                      </div>
                     </div>
                   )}
                 </div>
@@ -525,6 +545,10 @@ export const Referenzen = (): JSX.Element => {
                     <div>
                       <span className="font-semibold text-gray-600">Ort:</span>
                       <p className="text-black">{project.details.ort}</p>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-600">Auftraggeber:</span>
+                      <p className="text-black">{project.details.auftraggeber}</p>
                     </div>
                     <div>
                       <span className="font-semibold text-gray-600">Auftrag:</span>
