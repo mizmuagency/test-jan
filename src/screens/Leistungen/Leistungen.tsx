@@ -150,26 +150,39 @@ export const Leistungen = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Service Sections Grid - 2x2 Layout */}
-            <div className="grid grid-cols-2 gap-8 mb-16">
-              {/* TROCKENBAU Section */}
-              <div className="relative h-[400px] overflow-hidden rounded-lg group">
-                <img
-                  src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Trockenbau"
-                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                    TROCKENBAU
-                  </h2>
-                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
-                    Moderne Trockenbauweise ermöglicht flexible Raumaufteilungen und schnelle Bauzeiten. Von einfachen Trennwänden bis hin zu komplexen Raum-in-Raum-Systemen realisieren wir alle Anforderungen mit höchster Präzision und Qualität. Unsere Expertise umfasst metallische Unterkonstruktionen und abgehängte Deckensysteme.
-                  </p>
+            {/* Trockenbau Section - Same layout as Raumakustik (image left, content right) */}
+            <div className="mb-16">
+              <div className="bg-[#3a3a3a] rounded-lg overflow-hidden">
+                <div className="flex">
+                  {/* Left side - Image */}
+                  <div className="w-1/2">
+                    <img
+                      src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      alt="Trockenbau - Drywall construction"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Right side - Content */}
+                  <div className="w-1/2 p-12 flex flex-col justify-center">
+                    <h2 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-8 tracking-wide">
+                      TROCKENBAU
+                    </h2>
+                    <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                      Unser Leistungsspektrum umfasst sämtliche Arbeiten im klassischen und 
+                      modernen Trockenbau, darunter die Herstellung von nichttragenden 
+                      Innenwänden, abgehängten Decken, Vorsatzschalen und Raum-in-
+                      Raum-Systemen. Wir realisieren individuelle Ausbaukonzepte für Wohn-, Gewerbe- und 
+                      Industriebauten – termingerecht, wirtschaftlich und mit höchstem 
+                      Qualitätsanspruch.
+                    </p>
+                  </div>
                 </div>
               </div>
+            </div>
 
+            {/* Service Sections Grid - 2x2 Layout */}
+            <div className="grid grid-cols-2 gap-8 mb-16">
               {/* BRANDSCHUTZ Section */}
               <div className="relative h-[400px] overflow-hidden rounded-lg group">
                 <img
@@ -220,6 +233,24 @@ export const Leistungen = (): JSX.Element => {
                   </h2>
                   <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
                     Professionelle Türmontagen gehören zu unserem Kerngeschäft. Wir installieren alle Arten von Türen - von Standard-Innentüren bis hin zu speziellen Brandschutztüren. Dabei achten wir auf präzise Ausrichtung, ordnungsgemäße Abdichtung und perfekte Funktionalität.
+                  </p>
+                </div>
+              </div>
+
+              {/* ABBRUCH & ENTSORGUNG Section */}
+              <div className="relative h-[400px] overflow-hidden rounded-lg group">
+                <img
+                  src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Abbruch & Entsorgung"
+                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                    ABBRUCH & ENTSORGUNG
+                  </h2>
+                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                    Fachgerechter Rückbau und umweltgerechte Entsorgung sind wichtige Bestandteile unserer Dienstleistungen. Wir führen kontrollierte Abbrucharbeiten durch und sorgen für die ordnungsgemäße Trennung und Entsorgung der Materialien nach geltenden Umweltbestimmungen.
                   </p>
                 </div>
               </div>
@@ -458,28 +489,37 @@ export const Leistungen = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Detailed Service Sections */}
-        <div className="px-6 pb-8">
-          {/* TROCKENBAU Section */}
-          <div className="mb-8">
-            <div className="relative h-[400px] overflow-hidden rounded-lg">
+        {/* Mobile Trockenbau Section - Stacked layout for mobile */}
+        <div className="px-6 mb-8">
+          <div className="bg-[#3a3a3a] rounded-lg overflow-hidden">
+            {/* Image */}
+            <div className="w-full h-[200px]">
               <img
                 src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Trockenbau"
+                alt="Trockenbau - Drywall construction"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                  TROCKENBAU
-                </h2>
-                <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
-                  Moderne Trockenbauweise ermöglicht flexible Raumaufteilungen und schnelle Bauzeiten. Von einfachen Trennwänden bis hin zu komplexen Raum-in-Raum-Systemen realisieren wir alle Anforderungen mit höchster Präzision und Qualität. Unsere Expertise umfasst metallische Unterkonstruktionen und abgehängte Deckensysteme.
-                </p>
-              </div>
+            </div>
+            
+            {/* Content */}
+            <div className="p-6">
+              <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                TROCKENBAU
+              </h2>
+              <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
+                Unser Leistungsspektrum umfasst sämtliche Arbeiten im klassischen und 
+                modernen Trockenbau, darunter die Herstellung von nichttragenden 
+                Innenwänden, abgehängten Decken, Vorsatzschalen und Raum-in-
+                Raum-Systemen. Wir realisieren individuelle Ausbaukonzepte für Wohn-, Gewerbe- und 
+                Industriebauten – termingerecht, wirtschaftlich und mit höchstem 
+                Qualitätsanspruch.
+              </p>
             </div>
           </div>
+        </div>
 
+        {/* Detailed Service Sections */}
+        <div className="px-6 pb-8">
           {/* BRANDSCHUTZ Section */}
           <div className="mb-8">
             <div className="relative h-[400px] overflow-hidden rounded-lg">
