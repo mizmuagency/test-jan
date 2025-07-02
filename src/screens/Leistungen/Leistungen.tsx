@@ -90,26 +90,39 @@ export const Leistungen = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Service Sections Grid - 2x2 Layout */}
-            <div className="grid grid-cols-2 gap-8 mb-16">
-              {/* RAUMAKUSTIK Section */}
-              <div className="relative h-[400px] overflow-hidden rounded-lg group">
-                <img
-                  src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Raumakustik"
-                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                    RAUMAKUSTIK
-                  </h2>
-                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
-                    Ein besonderer Schwerpunkt unserer Tätigkeit liegt in der innovativen Raumakustik, insbesondere in der Ausführung von fugenlosen Akustikdecken-Systemen. Diese bieten nicht nur eine exzellente Schallabsorption, sondern ermöglichen durch ihre homogene Oberfläche auch ein hochwertiges architektonisches Erscheinungsbild.
-                  </p>
+            {/* Raumakustik Section - Matching the screenshot */}
+            <div className="mb-16">
+              <div className="bg-[#3a3a3a] rounded-lg overflow-hidden">
+                <div className="flex">
+                  {/* Left side - Image */}
+                  <div className="w-1/2">
+                    <img
+                      src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      alt="Raumakustik - Acoustic panels construction"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Right side - Content */}
+                  <div className="w-1/2 p-12 flex flex-col justify-center">
+                    <h2 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-8 tracking-wide">
+                      RAUMAKUSTIK
+                    </h2>
+                    <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                      Ein besonderer Schwerpunkt unserer Tätigkeit liegt in der innovativen Raumakustik, 
+                      insbesondere in der Ausführung von fugenlosen Akustikdecken-Systemen. Diese bieten 
+                      nicht nur eine exzellente Schallabsorption, sondern ermöglichen durch ihre homogene 
+                      Oberfläche auch ein hochwertiges architektonisches Erscheinungsbild. Hierbei arbeiten 
+                      wir mit geprüften Systemlösungen namhafter Hersteller und setzen auch komplexe 
+                      Sonderlösungen um.
+                    </p>
+                  </div>
                 </div>
               </div>
+            </div>
 
+            {/* Service Sections Grid - 2x2 Layout */}
+            <div className="grid grid-cols-2 gap-8 mb-16">
               {/* TROCKENBAU Section */}
               <div className="relative h-[400px] overflow-hidden rounded-lg group">
                 <img
@@ -160,6 +173,24 @@ export const Leistungen = (): JSX.Element => {
                   </h2>
                   <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
                     Perfekte Oberflächen sind unser Markenzeichen. Von der Grundspachtelung bis zur Q4-Qualität bieten wir alle Qualitätsstufen für höchste Ansprüche. Unsere erfahrenen Spezialisten sorgen für makellose Ergebnisse und bereiten Ihre Oberflächen optimal für die weitere Bearbeitung vor.
+                  </p>
+                </div>
+              </div>
+
+              {/* TÜRMONTAGEN Section */}
+              <div className="relative h-[400px] overflow-hidden rounded-lg group">
+                <img
+                  src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Türmontagen"
+                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                    TÜRMONTAGEN
+                  </h2>
+                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                    Professionelle Türmontagen gehören zu unserem Kerngeschäft. Wir installieren alle Arten von Türen - von Standard-Innentüren bis hin zu speziellen Brandschutztüren. Dabei achten wir auf präzise Ausrichtung, ordnungsgemäße Abdichtung und perfekte Funktionalität.
                   </p>
                 </div>
               </div>
@@ -344,28 +375,35 @@ export const Leistungen = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Detailed Service Sections */}
-        <div className="px-6 pb-8">
-          {/* RAUMAKUSTIK Section */}
-          <div className="mb-8">
-            <div className="relative h-[400px] overflow-hidden rounded-lg">
+        {/* Mobile Raumakustik Section - Stacked layout for mobile */}
+        <div className="px-6 mb-8">
+          <div className="bg-[#3a3a3a] rounded-lg overflow-hidden">
+            {/* Image */}
+            <div className="w-full h-[200px]">
               <img
                 src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Raumakustik"
+                alt="Raumakustik - Acoustic panels construction"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                  RAUMAKUSTIK
-                </h2>
-                <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
-                  Ein besonderer Schwerpunkt unserer Tätigkeit liegt in der innovativen Raumakustik, insbesondere in der Ausführung von fugenlosen Akustikdecken-Systemen. Diese bieten nicht nur eine exzellente Schallabsorption, sondern ermöglichen durch ihre homogene Oberfläche auch ein hochwertiges architektonisches Erscheinungsbild.
-                </p>
-              </div>
+            </div>
+            
+            {/* Content */}
+            <div className="p-6">
+              <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                RAUMAKUSTIK
+              </h2>
+              <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
+                Ein besonderer Schwerpunkt unserer Tätigkeit liegt in der innovativen Raumakustik, 
+                insbesondere in der Ausführung von fugenlosen Akustikdecken-Systemen. Diese bieten 
+                nicht nur eine exzellente Schallabsorption, sondern ermöglichen durch ihre homogene 
+                Oberfläche auch ein hochwertiges architektonisches Erscheinungsbild.
+              </p>
             </div>
           </div>
+        </div>
 
+        {/* Detailed Service Sections */}
+        <div className="px-6 pb-8">
           {/* TROCKENBAU Section */}
           <div className="mb-8">
             <div className="relative h-[400px] overflow-hidden rounded-lg">
