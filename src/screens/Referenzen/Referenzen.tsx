@@ -238,9 +238,9 @@ export const Referenzen = (): JSX.Element => {
                     />
                   </div>
 
-                  {/* Expanded Project Details - Matching Screenshot Layout */}
+                  {/* Expanded Project Details - Using #262a28 Background */}
                   {expandedProject === project.id && (
-                    <div className="bg-[#2a2a2a] rounded-lg mt-2 overflow-hidden">
+                    <div className="bg-[#262a28] rounded-lg mt-2 overflow-hidden">
                       {/* Project Details Table */}
                       <div className="p-6">
                         <div className="space-y-3">
