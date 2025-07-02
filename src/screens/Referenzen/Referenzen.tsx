@@ -289,17 +289,17 @@ export const Referenzen = (): JSX.Element => {
           </div>
         </main>
 
-        {/* Pre-footer Section - Light Background */}
+        {/* Pre-footer Section - Light Background with Larger Font Size */}
         <div className="w-full bg-[#f8f8f8] py-20">
           <div className="max-w-7xl mx-auto px-8">
             <div className="max-w-2xl">
-              <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+              <h2 className="text-6xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
                 Wir möchten, dass
               </h2>
-              <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+              <h2 className="text-6xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
                 unsere Arbeit
               </h2>
-              <h2 className="text-4xl font-bold [font-family:'Roboto',Helvetica] mb-8">
+              <h2 className="text-6xl font-bold [font-family:'Roboto',Helvetica] mb-8">
                 <span className="text-[#e53935]">sichtbar</span> <span className="text-black">bleibt!</span>
               </h2>
               
@@ -579,16 +579,16 @@ export const Referenzen = (): JSX.Element => {
           ))}
         </div>
 
-        {/* Mobile Pre-footer Section - Light Background */}
+        {/* Mobile Pre-footer Section - Light Background with Larger Font Size */}
         <div className="w-full bg-[#f8f8f8] px-6 py-12">
           <div className="max-w-sm">
-            <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+            <h2 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
               Wir möchten, dass
             </h2>
-            <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+            <h2 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
               unsere Arbeit
             </h2>
-            <h2 className="text-2xl font-bold [font-family:'Roboto',Helvetica] mb-6">
+            <h2 className="text-3xl font-bold [font-family:'Roboto',Helvetica] mb-6">
               <span className="text-[#e53935]">sichtbar</span> <span className="text-black">bleibt!</span>
             </h2>
             
