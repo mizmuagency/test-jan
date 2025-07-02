@@ -155,7 +155,7 @@ export const Referenzen = (): JSX.Element => {
         </header>
 
         {/* Desktop Main Content - Dark Background */}
-        <main className="bg-[#3a3a3a] min-h-screen">
+        <main className="bg-[#262a28] min-h-screen">
           {/* Hero Section with Construction Image - No Title Overlay */}
           <div className="relative h-[400px] overflow-hidden">
             <img
@@ -177,11 +177,6 @@ export const Referenzen = (): JSX.Element => {
               {/* Description Text */}
               <div className="max-w-4xl">
                 <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed mb-6">
-                  Wir lieben und leben Gips. Mit viel Know-how und hohem Engagement setzen wir 
-                  die Wünsche unserer Kunden präzise und vor allem pünktlich um.
-                </p>
-                
-                <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed mb-6">
                   Eine echte Partnerschaft ist eine Einbahnstraße – Ideen und Informationen 
                   fließen offen und regelmäßig, basierend auf gegenseitigem Vertrauen und 
                   Respekt für das gegenseitige Fachwissen – und unsere Kunden begrüßen 
@@ -200,27 +195,33 @@ export const Referenzen = (): JSX.Element => {
             <div className="grid grid-cols-2 gap-8">
               {projects.map((project, index) => (
                 <div key={project.id} className="mb-8">
-                  {/* Project Image */}
+                  {/* Project Image Container - Fixed dimensions */}
                   <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
                     <img
                       src={project.images[expandedProject === project.id ? currentImageIndex : 0]}
                       alt={project.title}
-                      className="w-full h-full object-cover filter grayscale"
+                      className="w-full h-full object-cover filter grayscale transition-all duration-300"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                     
-                    {/* Navigation arrows for image carousel when expanded */}
+                    {/* Navigation arrows for image carousel when expanded - Within image boundaries */}
                     {expandedProject === project.id && project.images.length > 1 && (
                       <>
                         <button
-                          onClick={prevImage}
-                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            prevImage();
+                          }}
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-2 rounded-full hover:bg-opacity-80 transition-all z-10"
                         >
                           <ChevronLeft className="w-5 h-5" />
                         </button>
                         <button
-                          onClick={nextImage}
-                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            nextImage();
+                          }}
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-2 rounded-full hover:bg-opacity-80 transition-all z-10"
                         >
                           <ChevronRight className="w-5 h-5" />
                         </button>
@@ -230,10 +231,10 @@ export const Referenzen = (): JSX.Element => {
 
                   {/* Project Title and Toggle */}
                   <div 
-                    className="flex justify-between items-center cursor-pointer py-2"
+                    className="flex justify-between items-center cursor-pointer py-3"
                     onClick={() => toggleProject(project.id)}
                   >
-                    <h3 className="text-xl font-bold text-white [font-family:'Roboto',Helvetica]">
+                    <h3 className="text-xl font-bold text-white [font-family:'Roboto',Helvetica] tracking-wide">
                       {project.title}
                     </h3>
                     <ChevronUp 
@@ -243,54 +244,57 @@ export const Referenzen = (): JSX.Element => {
                     />
                   </div>
 
-                  {/* Expanded Project Details - Using #262a28 Background */}
+                  {/* Expanded Project Details - Matching Screenshot Layout */}
                   {expandedProject === project.id && (
-                    <div className="bg-[#262a28] rounded-lg mt-2 overflow-hidden">
-                      {/* Project Details Table */}
+                    <div className="bg-[#1a1d1b] rounded-lg overflow-hidden">
+                      {/* Project Details Table - Exact spacing and formatting from screenshot */}
                       <div className="p-6">
-                        <div className="space-y-3">
+                        <div className="space-y-4">
                           {/* Objekt */}
-                          <div className="flex justify-between items-center border-b border-gray-600 pb-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Objekt</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.objekt}</span>
+                          <div className="flex justify-between items-center py-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Objekt</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.objekt}</span>
                           </div>
                           
                           {/* Ort */}
-                          <div className="flex justify-between items-center border-b border-gray-600 pb-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Ort</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.ort}</span>
+                          <div className="flex justify-between items-center py-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Ort</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.ort}</span>
                           </div>
                           
                           {/* Auftraggeber */}
-                          <div className="flex justify-between items-center border-b border-gray-600 pb-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Auftraggeber</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.auftraggeber}</span>
+                          <div className="flex justify-between items-center py-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Auftraggeber</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.auftraggeber}</span>
                           </div>
                           
                           {/* Auftrag */}
-                          <div className="flex justify-between items-center border-b border-gray-600 pb-2">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Auftrag</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.auftrag}</span>
+                          <div className="flex justify-between items-center py-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Auftrag</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.auftrag}</span>
                           </div>
                           
                           {/* Jahr */}
-                          <div className="flex justify-between items-center">
-                            <span className="text-white [font-family:'Roboto',Helvetica] font-medium">Jahr</span>
-                            <span className="text-white [font-family:'Roboto',Helvetica]">{project.details.jahr}</span>
+                          <div className="flex justify-between items-center py-2">
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">Jahr</span>
+                            <span className="text-white [font-family:'Roboto',Helvetica] font-normal text-base">{project.details.jahr}</span>
                           </div>
                         </div>
                       </div>
 
-                      {/* Additional Images Gallery */}
+                      {/* Additional Images Gallery - Only show if multiple images */}
                       {project.images.length > 1 && (
                         <div className="px-6 pb-6">
-                          <div className="grid grid-cols-3 gap-2">
+                          <div className="grid grid-cols-4 gap-2">
                             {project.images.map((image, imgIndex) => (
                               <button
                                 key={imgIndex}
-                                onClick={() => setCurrentImageIndex(imgIndex)}
-                                className={`relative h-20 overflow-hidden rounded transition-all ${
-                                  currentImageIndex === imgIndex ? 'ring-2 ring-[#e53935]' : ''
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setCurrentImageIndex(imgIndex);
+                                }}
+                                className={`relative h-16 overflow-hidden rounded transition-all ${
+                                  currentImageIndex === imgIndex ? 'ring-2 ring-[#e53935]' : 'opacity-70 hover:opacity-100'
                                 }`}
                               >
                                 <img
