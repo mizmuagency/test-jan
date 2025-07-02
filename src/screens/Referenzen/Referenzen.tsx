@@ -195,8 +195,8 @@ export const Referenzen = (): JSX.Element => {
             <div className="grid grid-cols-2 gap-8">
               {projects.map((project, index) => (
                 <div key={project.id} className="mb-8">
-                  {/* Project Image Container - Fixed dimensions */}
-                  <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+                  {/* Project Image Container - Square aspect ratio */}
+                  <div className="relative aspect-square overflow-hidden rounded-lg mb-4">
                     <img
                       src={project.images[expandedProject === project.id ? currentImageIndex : 0]}
                       alt={project.title}
@@ -447,7 +447,7 @@ export const Referenzen = (): JSX.Element => {
           </p>
         </div>
 
-        {/* Projects Section */}
+        {/* Projects Section - Mobile keeps rectangular format for better mobile viewing */}
         <div className="px-6 pb-8">
           {projects.slice(0, 3).map((project, index) => (
             <div key={project.id} className="mb-6">
