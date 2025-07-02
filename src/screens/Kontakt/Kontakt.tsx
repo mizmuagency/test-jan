@@ -94,6 +94,37 @@ export const Kontakt = (): JSX.Element => {
           </div>
         </header>
 
+        {/* Hero Section with Contact Icons - Matching the screenshot */}
+        <div className="relative h-[400px] overflow-hidden">
+          {/* Background Image */}
+          <img
+            src="/image copy copy copy.png"
+            alt="Contact us - Business communication"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          
+          {/* Contact Icons Overlay - Three circular icons */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex space-x-12">
+              {/* Email Icon */}
+              <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white border-opacity-30">
+                <Mail className="w-10 h-10 text-white" />
+              </div>
+              
+              {/* Phone Icon */}
+              <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white border-opacity-30">
+                <Phone className="w-10 h-10 text-white" />
+              </div>
+              
+              {/* At Symbol Icon */}
+              <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white border-opacity-30">
+                <span className="text-white text-3xl font-bold">@</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Desktop Main Content */}
         <main className="bg-white">
           <div className="max-w-7xl mx-auto px-8 py-16">
