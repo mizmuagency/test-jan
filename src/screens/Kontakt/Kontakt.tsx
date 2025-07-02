@@ -94,11 +94,11 @@ export const Kontakt = (): JSX.Element => {
           </div>
         </header>
 
-        {/* Hero Section with Contact Icons - Matching the screenshot */}
+        {/* Hero Section with Contact Icons - Using the new uploaded image */}
         <div className="relative h-[400px] overflow-hidden">
-          {/* Background Image */}
+          {/* Background Image - Using the new uploaded image */}
           <img
-            src="/image copy copy copy.png"
+            src="/image copy copy copy copy copy.png"
             alt="Contact us - Business communication"
             className="w-full h-full object-cover"
           />
@@ -429,9 +429,9 @@ export const Kontakt = (): JSX.Element => {
 
         {/* Hero Section with Contact Icons */}
         <div className="relative h-[350px] sm:h-[400px] overflow-hidden">
-          {/* Background Image */}
+          {/* Background Image - Using the new uploaded image for mobile too */}
           <img
-            src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800"
+            src="/image copy copy copy copy copy.png"
             alt="Contact us"
             className="w-full h-full object-cover"
           />
