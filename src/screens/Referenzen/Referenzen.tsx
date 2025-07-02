@@ -156,7 +156,7 @@ export const Referenzen = (): JSX.Element => {
 
         {/* Desktop Main Content - Dark Background */}
         <main className="bg-[#3a3a3a] min-h-screen">
-          {/* Hero Section with Construction Image */}
+          {/* Hero Section with Construction Image - No Title Overlay */}
           <div className="relative h-[400px] overflow-hidden">
             <img
               src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -164,31 +164,36 @@ export const Referenzen = (): JSX.Element => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-            
-            {/* Title Overlay */}
-            <div className="absolute bottom-8 left-8">
-              <h1 className="text-5xl font-bold text-white [font-family:'Roboto',Helvetica] tracking-wide">
-                REFERENZEN
-              </h1>
-            </div>
           </div>
 
           {/* Content Section */}
           <div className="max-w-7xl mx-auto px-8 py-16">
-            {/* Description Text */}
-            <div className="mb-16 max-w-4xl">
-              <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed mb-6">
-                Eine echte Partnerschaft ist eine Einbahnstraße – Ideen und Informationen 
-                fließen offen und regelmäßig, basierend auf gegenseitigem Vertrauen und 
-                Respekt für das gegenseitige Fachwissen – und unsere Kunden begrüßen 
-                diese Philosophie.
-              </p>
+            {/* Title Section */}
+            <div className="mb-16">
+              <h1 className="text-5xl font-bold text-white [font-family:'Roboto',Helvetica] tracking-wide mb-8">
+                REFERENZEN
+              </h1>
               
-              <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
-                Die besten und produktivsten Beziehungen sind synergetisch und 
-                zielorientiert, und eine langfristige Beziehung bietet die Mehrwert tief 
-                verwurzelter Branchen- und Unternehmenskenntnisse und -beziehungen.
-              </p>
+              {/* Description Text */}
+              <div className="max-w-4xl">
+                <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed mb-6">
+                  Wir lieben und leben Gips. Mit viel Know-how und hohem Engagement setzen wir 
+                  die Wünsche unserer Kunden präzise und vor allem pünktlich um.
+                </p>
+                
+                <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed mb-6">
+                  Eine echte Partnerschaft ist eine Einbahnstraße – Ideen und Informationen 
+                  fließen offen und regelmäßig, basierend auf gegenseitigem Vertrauen und 
+                  Respekt für das gegenseitige Fachwissen – und unsere Kunden begrüßen 
+                  diese Philosophie.
+                </p>
+                
+                <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Die besten und produktivsten Beziehungen sind synergetisch und 
+                  zielorientiert, und eine langfristige Beziehung bietet die Mehrwert tief 
+                  verwurzelter Branchen- und Unternehmenskenntnisse und -beziehungen.
+                </p>
+              </div>
             </div>
 
             {/* Projects Grid - Two Columns */}
