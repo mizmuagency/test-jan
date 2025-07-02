@@ -27,7 +27,251 @@ export const Leistungen = (): JSX.Element => {
 
   return (
     <div className="bg-white w-full min-h-screen">
-      <div className="bg-white max-w-md mx-auto relative min-h-screen">
+      {/* Desktop Layout */}
+      <div className="hidden lg:block">
+        {/* Desktop Header */}
+        <header className="bg-white px-8 py-4">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            {/* Logo */}
+            <Link to="/" className="w-12 h-12">
+              <img
+                src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
+                alt="J.A.N. BAU Home"
+                className="w-full h-full object-contain"
+              />
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <nav className="flex space-x-8">
+              {mainNavItems.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className={`[font-family:'Roboto',Helvetica] font-medium text-sm hover:text-[#e53935] transition-colors ${
+                    item.name === "LEISTUNGEN" ? "text-[#e53935]" : "text-black"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </header>
+
+        {/* Desktop Main Content */}
+        <main className="bg-white">
+          {/* Hero Section with Large Construction Image */}
+          <div className="relative h-[500px] overflow-hidden">
+            <img
+              src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Construction services"
+              className="w-full h-full object-cover filter grayscale"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          </div>
+
+          {/* Content Section */}
+          <div className="max-w-7xl mx-auto px-8 py-16">
+            {/* Title Section */}
+            <div className="mb-16">
+              <h1 className="text-6xl font-bold text-black [font-family:'Roboto',Helvetica] tracking-wide mb-12">
+                LEISTUNGEN
+              </h1>
+              
+              {/* Services Description */}
+              <div className="max-w-4xl">
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Unser Leistungsspektrum umfasst sämtliche Arbeiten im klassischen und modernen Trockenbau, 
+                  darunter die Herstellung von nichttragenden Innenwänden, abgehängten 
+                  Decken, Vorsatzschalen und Raum-in-Raum-Systemen. Wir realisieren individuelle 
+                  Ausbaukonzepte für Wohn-, Gewerbe- und Industriebauten – termingerecht, wirtschaftlich und 
+                  mit höchstem Qualitätsanspruch.
+                </p>
+              </div>
+            </div>
+
+            {/* Service Sections Grid - 2x2 Layout */}
+            <div className="grid grid-cols-2 gap-8 mb-16">
+              {/* RAUMAKUSTIK Section */}
+              <div className="relative h-[400px] overflow-hidden rounded-lg group">
+                <img
+                  src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Raumakustik"
+                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                    RAUMAKUSTIK
+                  </h2>
+                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                    Ein besonderer Schwerpunkt unserer Tätigkeit liegt in der innovativen Raumakustik, insbesondere in der Ausführung von fugenlosen Akustikdecken-Systemen. Diese bieten nicht nur eine exzellente Schallabsorption, sondern ermöglichen durch ihre homogene Oberfläche auch ein hochwertiges architektonisches Erscheinungsbild.
+                  </p>
+                </div>
+              </div>
+
+              {/* TROCKENBAU Section */}
+              <div className="relative h-[400px] overflow-hidden rounded-lg group">
+                <img
+                  src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Trockenbau"
+                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                    TROCKENBAU
+                  </h2>
+                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                    Moderne Trockenbauweise ermöglicht flexible Raumaufteilungen und schnelle Bauzeiten. Von einfachen Trennwänden bis hin zu komplexen Raum-in-Raum-Systemen realisieren wir alle Anforderungen mit höchster Präzision und Qualität. Unsere Expertise umfasst metallische Unterkonstruktionen und abgehängte Deckensysteme.
+                  </p>
+                </div>
+              </div>
+
+              {/* BRANDSCHUTZ Section */}
+              <div className="relative h-[400px] overflow-hidden rounded-lg group">
+                <img
+                  src="https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Brandschutz"
+                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                    BRANDSCHUTZ
+                  </h2>
+                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                    Sicherheit steht an erster Stelle. Unsere Brandschutzlösungen erfüllen alle aktuellen Normen und Vorschriften. Wir installieren zertifizierte Brandschutzsysteme für Wände, Decken und Durchführungen. Von der Planung bis zur Ausführung gewährleisten wir höchste Sicherheitsstandards.
+                  </p>
+                </div>
+              </div>
+
+              {/* SPACHTELARBEITEN Section */}
+              <div className="relative h-[400px] overflow-hidden rounded-lg group">
+                <img
+                  src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Spachtelarbeiten"
+                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                    SPACHTELARBEITEN
+                  </h2>
+                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                    Perfekte Oberflächen sind unser Markenzeichen. Von der Grundspachtelung bis zur Q4-Qualität bieten wir alle Qualitätsstufen für höchste Ansprüche. Unsere erfahrenen Spezialisten sorgen für makellose Ergebnisse und bereiten Ihre Oberflächen optimal für die weitere Bearbeitung vor.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action Section */}
+            <div className="text-center bg-[#f8f8f8] py-16 px-8 rounded-lg">
+              <h3 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+                Interesse an unseren Leistungen?
+              </h3>
+              <p className="text-black [font-family:'Roboto',Helvetica] text-lg mb-8 max-w-2xl mx-auto">
+                Kontaktieren Sie uns für ein unverbindliches Angebot.
+              </p>
+              <Link
+                to="/kontakt"
+                className="inline-block bg-[#e53935] text-white px-12 py-4 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-lg hover:bg-[#c62828] transition-colors"
+              >
+                KONTAKT AUFNEHMEN
+              </Link>
+            </div>
+          </div>
+        </main>
+
+        {/* Desktop Footer Section */}
+        <div className="w-full bg-[#262a28] px-8 py-16">
+          <div className="max-w-7xl mx-auto">
+            {/* Company logo and name - left aligned */}
+            <div className="flex flex-col items-start mb-8">
+              <img
+                className="w-24 h-[88px] object-cover mb-4"
+                alt="Jan bau"
+                src="/jan-bau-1.png"
+              />
+              <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-left">
+                J.A.N. BAU GmbH
+              </div>
+            </div>
+
+            {/* Company description with proper line breaks */}
+            <div className="mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] max-w-3xl">
+              Wir sind ein Unternehmen der Bauindustrie im<br />
+              Bereich Trockenes, Akustik und Spachtelarbeiten.<br />
+              Unser Leistungsspektrum umfasst die gesamte<br />
+              Trockenbau, Akustik, Brandschutz und<br />
+              Schallschutz, Türmontagen, Abbruch und<br />
+              Entsorgung sowie Spachtelarbeiten.
+            </div>
+
+            {/* Social media icons */}
+            <div className="flex gap-12 mb-12">
+              <FacebookIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+              <InstagramIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+              <WhatsAppIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+            </div>
+
+            {/* Contact information */}
+            <div className="mb-12">
+              <div className="mb-6 text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-xl tracking-[0] leading-[22px]">
+                KONTAKT
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  Tödistrasse 2, 8854 Siebnen
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-center gap-3 mb-4">
+                <Phone className="w-6 h-6 text-white flex-shrink-0" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  +41 76 220 46 53
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center gap-3 mb-8">
+                <Mail className="w-6 h-6 text-white flex-shrink-0" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  info@jan-bau.ch
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="mb-12">
+              <div className="mb-4 [font-family:'Roboto',Helvetica] font-bold text-[#f84646] text-xl tracking-[0] leading-[22px]">
+                Navigation
+              </div>
+              <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] space-y-1">
+                <Link to="/" className="block hover:text-[#e53935] transition-colors">Startseite</Link>
+                <Link to="/referenzen" className="block hover:text-[#e53935] transition-colors">Referenzen</Link>
+                <Link to="/leistungen" className="block hover:text-[#e53935] transition-colors">Leistungen</Link>
+                <Link to="/unternehmen" className="block hover:text-[#e53935] transition-colors">Unternehmen</Link>
+                <Link to="/kontakt" className="block hover:text-[#e53935] transition-colors">Kontakt</Link>
+                <Link to="/datenschutz" className="block hover:text-[#e53935] transition-colors">Datenschutz</Link>
+              </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[30px]">
+              ©&nbsp;&nbsp;J.A.N Bau GmbH. Alle Rechte vorbehalten. Webseite
+              Design: mizmu.ch
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Layout - Keep existing mobile design unchanged */}
+      <div className="lg:hidden bg-white max-w-md mx-auto relative min-h-screen">
         {/* Header with logo and menu */}
         <div className="flex justify-between items-center p-4 relative z-10">
           <Link to="/" className="w-8 h-8 sm:w-10 sm:h-10">
