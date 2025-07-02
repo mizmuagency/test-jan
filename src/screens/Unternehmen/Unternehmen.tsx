@@ -13,40 +13,6 @@ export const Unternehmen = (): JSX.Element => {
     { name: "KONTAKT", path: "/kontakt" }
   ];
 
-  // Team members data from screenshot
-  const teamMembers = [
-    {
-      name: "Nazmin Hrnijic",
-      position: "Geschäftsführer",
-      phone: "T: +41 76 220 46 52",
-      email: "info@jan-bau.ch"
-    },
-    {
-      name: "Amina Hrnijic",
-      position: "Administration",
-      phone: "T: +41 76 310 27 09",
-      email: "vorne.name@jan-bau.ch"
-    },
-    {
-      name: "Naim Hrnijic",
-      position: "Vorarbeiter",
-      phone: "T: +41 76 320 92 62",
-      email: "vorne.name@jan-bau.ch"
-    },
-    {
-      name: "Kjenan Misinii",
-      position: "Vorarbeiter",
-      phone: "",
-      email: "info@jan-bau.ch"
-    },
-    {
-      name: "Felix Bärtschiger",
-      position: "Kundenposer",
-      phone: "T: +41 76 310 27 09",
-      email: "info@jan-bau.ch"
-    }
-  ];
-
   // Desktop team members data with actual names from screenshot
   const desktopTeamMembers = [
     {
@@ -83,6 +49,40 @@ export const Unternehmen = (): JSX.Element => {
       phone: "T: +41 76 310 27 09",
       email: "vorna.name@jan-bau.ch", 
       image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+    }
+  ];
+
+  // Team members data from screenshot
+  const teamMembers = [
+    {
+      name: "Nazmin Hrnijic",
+      position: "Geschäftsführer",
+      phone: "T: +41 76 220 46 52",
+      email: "info@jan-bau.ch"
+    },
+    {
+      name: "Amina Hrnijic",
+      position: "Administration",
+      phone: "T: +41 76 310 27 09",
+      email: "vorne.name@jan-bau.ch"
+    },
+    {
+      name: "Naim Hrnijic",
+      position: "Vorarbeiter",
+      phone: "T: +41 76 320 92 62",
+      email: "vorne.name@jan-bau.ch"
+    },
+    {
+      name: "Kjenan Misinii",
+      position: "Vorarbeiter",
+      phone: "",
+      email: "info@jan-bau.ch"
+    },
+    {
+      name: "Felix Bärtschiger",
+      position: "Kundenposer",
+      phone: "T: +41 76 310 27 09",
+      email: "info@jan-bau.ch"
     }
   ];
 
@@ -172,9 +172,11 @@ export const Unternehmen = (): JSX.Element => {
                 </p>
               </div>
             </div>
+          </div>
 
-            {/* Persons Section - Dark Background matching screenshot exactly */}
-            <div className="bg-[#3a3a3a] rounded-lg p-16 mb-16">
+          {/* Persons Section - Full Width Dark Background */}
+          <div className="w-full bg-[#3a3a3a] py-20">
+            <div className="max-w-7xl mx-auto px-8">
               <h2 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-16 tracking-wide">
                 PERSONEN
               </h2>
@@ -252,6 +254,51 @@ export const Unternehmen = (): JSX.Element => {
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Text Sections - Matching screenshot exactly */}
+          <div className="max-w-7xl mx-auto px-8 py-16">
+            {/* UNSERE GESCHICHTE Section */}
+            <div className="mb-16">
+              <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8 tracking-wide">
+                UNSERE GESCHICHTE
+              </h2>
+              
+              <div className="max-w-4xl space-y-6">
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Firmengründer Nazmin ist im Bauhandwerk aufgewachsen und entwickelte früh ein Gespür 
+                  für Präzision, Tiefe und Verlässlichkeit. Aufmerksam, analytisch, mitdenkend – das 
+                  gehörte von Anfang an dazu.
+                </p>
+                
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Nach dem Abschluss als Bauzeichner führte ihn sein Weg direkt ins Handwerk. Als Maler 
+                  und Gipser konnte er sein Wissen und seine Leidenschaft täglich einbringen.
+                </p>
+                
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Bis heute prägt diese handwerkliche Führung unsere Arbeit. Wir verstehen uns als echter 
+                  Familienbetrieb – mit handwerklicher Qualität, Zuverlässigkeit und dem Anspruch, jedes Projekt 
+                  mit Sorgfalt und Herz umzusetzen.
+                </p>
+              </div>
+            </div>
+
+            {/* UNSERE VISION Section */}
+            <div className="mb-16">
+              <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8 tracking-wide">
+                UNSERE VISION
+              </h2>
+              
+              <div className="max-w-4xl">
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Wir möchten, dass unsere Arbeit sichtbar bleibt – 
+                  in Form von Qualität, die überzeugt. Unser Ziel ist es, weiter zu wachsen, und dabei nie 
+                  unsere familiären Werte und unseren hohen Anspruch an unsere Leistungen und die 
+                  Qualität aus den Augen zu verlieren.
+                </p>
               </div>
             </div>
           </div>
