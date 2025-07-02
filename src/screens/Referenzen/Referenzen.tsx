@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, ChevronUp, Menu, X, FacebookIcon, InstagramIcon, MapPin, Phone, Mail } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Menu, X, FacebookIcon, InstagramIcon, MapPin, Phone, Mail } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -34,7 +34,7 @@ export const Referenzen = (): JSX.Element => {
     },
     {
       id: 2,
-      title: "BASEL | WOHNBAU",
+      title: "ZÜRICH | OBJEKT",
       images: [
         "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
         "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -48,7 +48,7 @@ export const Referenzen = (): JSX.Element => {
     },
     {
       id: 3,
-      title: "BERN | BÜROGEBÄUDE",
+      title: "ZÜRICH | OBJEKT",
       images: [
         "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800",
         "https://images.pexels.com/photos/2102588/pexels-photo-2102588.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -58,6 +58,20 @@ export const Referenzen = (): JSX.Element => {
         ort: "3000 Bern",
         auftrag: "Akustikbau",
         jahr: "2023"
+      }
+    },
+    {
+      id: 4,
+      title: "ZÜRICH | OBJEKT",
+      images: [
+        "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      details: {
+        objekt: "Industriebau",
+        ort: "6000 Luzern",
+        auftrag: "Spachtelarbeiten",
+        jahr: "2024"
       }
     }
   ];
@@ -107,7 +121,260 @@ export const Referenzen = (): JSX.Element => {
 
   return (
     <div className="bg-white w-full min-h-screen">
-      <div className="bg-white max-w-md mx-auto relative min-h-screen">
+      {/* Desktop Layout */}
+      <div className="hidden lg:block">
+        {/* Desktop Header */}
+        <header className="bg-white px-8 py-4">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            {/* Logo */}
+            <Link to="/" className="w-12 h-12">
+              <img
+                src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
+                alt="J.A.N. BAU Home"
+                className="w-full h-full object-contain"
+              />
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <nav className="flex space-x-8">
+              {mainNavItems.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className="text-black [font-family:'Roboto',Helvetica] font-medium text-sm hover:text-[#e53935] transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </header>
+
+        {/* Desktop Main Content - Dark Background */}
+        <main className="bg-[#3a3a3a] min-h-screen">
+          {/* Hero Section with Construction Image */}
+          <div className="relative h-[400px] overflow-hidden">
+            <img
+              src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Construction project"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            
+            {/* Title Overlay */}
+            <div className="absolute bottom-8 left-8">
+              <h1 className="text-5xl font-bold text-white [font-family:'Roboto',Helvetica] tracking-wide">
+                REFERENZEN
+              </h1>
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="max-w-7xl mx-auto px-8 py-16">
+            {/* Description Text */}
+            <div className="mb-16 max-w-4xl">
+              <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed mb-6">
+                Eine echte Partnerschaft ist eine Einbahnstraße – Ideen und Informationen 
+                fließen offen und regelmäßig, basierend auf gegenseitigem Vertrauen und 
+                Respekt für das gegenseitige Fachwissen – und unsere Kunden begrüßen 
+                diese Philosophie.
+              </p>
+              
+              <p className="text-white [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                Die besten und produktivsten Beziehungen sind synergetisch und 
+                zielorientiert, und eine langfristige Beziehung bietet die Mehrwert tief 
+                verwurzelter Branchen- und Unternehmenskenntnisse und -beziehungen.
+              </p>
+            </div>
+
+            {/* Projects Grid - Two Columns */}
+            <div className="grid grid-cols-2 gap-8">
+              {projects.map((project, index) => (
+                <div key={project.id} className="mb-8">
+                  {/* Project Image */}
+                  <div className="relative h-[300px] overflow-hidden rounded-lg mb-4">
+                    <img
+                      src={project.images[expandedProject === project.id ? currentImageIndex : 0]}
+                      alt={project.title}
+                      className="w-full h-full object-cover filter grayscale"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                    
+                    {/* Navigation arrows for image carousel when expanded */}
+                    {expandedProject === project.id && project.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                        >
+                          <ChevronLeft className="w-5 h-5" />
+                        </button>
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+                        >
+                          <ChevronRight className="w-5 h-5" />
+                        </button>
+                      </>
+                    )}
+                  </div>
+
+                  {/* Project Title and Toggle */}
+                  <div 
+                    className="flex justify-between items-center cursor-pointer py-2"
+                    onClick={() => toggleProject(project.id)}
+                  >
+                    <h3 className="text-xl font-bold text-white [font-family:'Roboto',Helvetica]">
+                      {project.title}
+                    </h3>
+                    <ChevronDown 
+                      className={`w-6 h-6 text-white transition-transform duration-300 ${
+                        expandedProject === project.id ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </div>
+
+                  {/* Expanded Project Details */}
+                  {expandedProject === project.id && (
+                    <div className="bg-[#4a4a4a] p-6 rounded-lg mt-2 space-y-4">
+                      {/* Additional Images */}
+                      {project.images.length > 1 && (
+                        <div className="mb-4">
+                          <img
+                            src={project.images[currentImageIndex]}
+                            alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                            className="w-full h-[200px] object-cover rounded-lg filter grayscale"
+                          />
+                          <div className="flex justify-center mt-2 space-x-2">
+                            {project.images.map((_, imgIndex) => (
+                              <button
+                                key={imgIndex}
+                                onClick={() => setCurrentImageIndex(imgIndex)}
+                                className={`w-2 h-2 rounded-full transition-colors ${
+                                  currentImageIndex === imgIndex ? 'bg-[#e53935]' : 'bg-gray-500'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Project Details */}
+                      <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                          <span className="font-semibold text-gray-300">Objekt:</span>
+                          <p className="text-white">{project.details.objekt}</p>
+                        </div>
+                        <div>
+                          <span className="font-semibold text-gray-300">Ort:</span>
+                          <p className="text-white">{project.details.ort}</p>
+                        </div>
+                        <div>
+                          <span className="font-semibold text-gray-300">Auftrag:</span>
+                          <p className="text-white">{project.details.auftrag}</p>
+                        </div>
+                        <div>
+                          <span className="font-semibold text-gray-300">Jahr:</span>
+                          <p className="text-white">{project.details.jahr}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </main>
+
+        {/* Desktop Footer Section */}
+        <div className="w-full bg-[#262a28] px-8 py-16">
+          <div className="max-w-7xl mx-auto">
+            {/* Company logo and name - left aligned */}
+            <div className="flex flex-col items-start mb-8">
+              <img
+                className="w-24 h-[88px] object-cover mb-4"
+                alt="Jan bau"
+                src="/jan-bau-1.png"
+              />
+              <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-left">
+                J.A.N. BAU GmbH
+              </div>
+            </div>
+
+            {/* Company description with proper line breaks */}
+            <div className="mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] max-w-3xl">
+              Wir sind ein Unternehmen der Bauindustrie im<br />
+              Bereich Trockenes, Akustik und Spachtelarbeiten.<br />
+              Unser Leistungsspektrum umfasst die gesamte<br />
+              Trockenbau, Akustik, Brandschutz und<br />
+              Schallschutz, Türmontagen, Abbruch und<br />
+              Entsorgung sowie Spachtelarbeiten.
+            </div>
+
+            {/* Social media icons */}
+            <div className="flex gap-12 mb-12">
+              <FacebookIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+              <InstagramIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+              <WhatsAppIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+            </div>
+
+            {/* Contact information */}
+            <div className="mb-12">
+              <div className="mb-6 text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-xl tracking-[0] leading-[22px]">
+                KONTAKT
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  Tödistrasse 2, 8854 Siebnen
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-center gap-3 mb-4">
+                <Phone className="w-6 h-6 text-white flex-shrink-0" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  +41 76 220 46 53
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center gap-3 mb-8">
+                <Mail className="w-6 h-6 text-white flex-shrink-0" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  info@jan-bau.ch
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="mb-12">
+              <div className="mb-4 [font-family:'Roboto',Helvetica] font-bold text-[#f84646] text-xl tracking-[0] leading-[22px]">
+                Navigation
+              </div>
+              <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] space-y-1">
+                <Link to="/" className="block hover:text-[#e53935] transition-colors">Startseite</Link>
+                <Link to="/referenzen" className="block hover:text-[#e53935] transition-colors">Referenzen</Link>
+                <Link to="/leistungen" className="block hover:text-[#e53935] transition-colors">Leistungen</Link>
+                <Link to="/unternehmen" className="block hover:text-[#e53935] transition-colors">Unternehmen</Link>
+                <Link to="/kontakt" className="block hover:text-[#e53935] transition-colors">Kontakt</Link>
+                <Link to="/datenschutz" className="block hover:text-[#e53935] transition-colors">Datenschutz</Link>
+              </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[30px]">
+              ©&nbsp;&nbsp;J.A.N Bau GmbH. Alle Rechte vorbehalten. Webseite
+              Design: mizmu.ch
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Layout - Keep existing mobile design */}
+      <div className="lg:hidden bg-white max-w-md mx-auto relative min-h-screen">
         {/* Header with logo and menu */}
         <div className="flex justify-between items-center p-4 relative z-10">
           <Link to="/" className="w-8 h-8 sm:w-10 sm:h-10">
@@ -179,7 +446,7 @@ export const Referenzen = (): JSX.Element => {
 
         {/* Projects Section */}
         <div className="px-6 pb-8">
-          {projects.map((project, index) => (
+          {projects.slice(0, 3).map((project, index) => (
             <div key={project.id} className="mb-6">
               {/* Project Preview */}
               <div className="relative h-[200px] sm:h-[250px] overflow-hidden rounded-lg mb-4">
@@ -290,10 +557,12 @@ export const Referenzen = (): JSX.Element => {
 
           {/* Company description */}
           <div className="mb-8 sm:mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-sm sm:text-base tracking-[0] leading-[20px] sm:leading-[22px]">
-            Wir sind ein Unternehmen der Bauindustrie im Bereich Trockenes,
-            Akustik und Spachtelarbeiten. Unser Leistungsspektrum umfasst die
-            gesamte Trockenbau, Akustik, Brandschutz und Schallschutz,
-            Türmontagen, Abbruch und Entsorgung sowie Spachtelarbeiten.
+            Wir sind ein Unternehmen der Bauindustrie im<br />
+            Bereich Trockenes, Akustik und Spachtelarbeiten.<br />
+            Unser Leistungsspektrum umfasst die gesamte<br />
+            Trockenbau, Akustik, Brandschutz und<br />
+            Schallschutz, Türmontagen, Abbruch und<br />
+            Entsorgung sowie Spachtelarbeiten.
           </div>
 
           {/* Social media icons */}
