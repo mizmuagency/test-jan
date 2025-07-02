@@ -61,7 +61,170 @@ export const Unternehmen = (): JSX.Element => {
 
   return (
     <div className="bg-white w-full min-h-screen">
-      <div className="bg-white max-w-md mx-auto relative min-h-screen">
+      {/* Desktop Layout */}
+      <div className="hidden lg:block">
+        {/* Desktop Header */}
+        <header className="bg-white px-8 py-4">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            {/* Logo */}
+            <Link to="/" className="w-12 h-12">
+              <img
+                src="https://pub-45b3416510f04b53aa169f591957c686.r2.dev/janbau%20weissneu.png"
+                alt="J.A.N. BAU Home"
+                className="w-full h-full object-contain"
+              />
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <nav className="flex space-x-8">
+              {mainNavItems.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className={`[font-family:'Roboto',Helvetica] font-medium text-sm hover:text-[#e53935] transition-colors ${
+                    item.name === "UNTERNEHMEN" ? "text-[#e53935]" : "text-black"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </header>
+
+        {/* Desktop Main Content */}
+        <main className="bg-white">
+          {/* Hero Section with Large Construction Image - Grayscale */}
+          <div className="relative h-[500px] overflow-hidden">
+            <img
+              src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Team collaboration - Construction site"
+              className="w-full h-full object-cover filter grayscale"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          </div>
+
+          {/* Content Section */}
+          <div className="max-w-7xl mx-auto px-8 py-16">
+            {/* Title Section */}
+            <div className="mb-16">
+              <h1 className="text-6xl font-bold text-black [font-family:'Roboto',Helvetica] tracking-wide mb-12">
+                UNTERNEHMEN
+              </h1>
+              
+              {/* Company Description - Matching screenshot text */}
+              <div className="max-w-4xl space-y-6">
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Die Firma J.A.N. Bau wurde am 27.04.2017 mit dem Ziel gegründet, etwas Eigenes aufzubauen – 
+                  ein Unternehmen, das durch Qualität überzeugt und sichtbar macht, was mit Leidenschaft und 
+                  handwerklichem Können entstehen kann.
+                </p>
+                
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Was mit drei engagierten Mitarbeitern und einem Fahrzeug begann, hat sich zu einem stabilen 
+                  und wachstumsstarken Handwerksbetrieb mit inzwischen 21 Mitarbeitern und 9 
+                  Fahrzeugen entwickelt.
+                </p>
+                
+                <p className="text-black [font-family:'Roboto',Helvetica] text-lg leading-relaxed">
+                  Der Name J.A.N steht nicht nur für unser Unternehmen, sondern auch für unsere Familie – 
+                  zusammengesetzt aus den Anfangsbuchstaben unserer Kinder und uns selbst. Denn für uns ist 
+                  die Firma mehr als ein Arbeitsplatz – sie ist ein Teil unseres Lebens.
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        {/* Desktop Footer Section */}
+        <div className="w-full bg-[#262a28] px-8 py-16">
+          <div className="max-w-7xl mx-auto">
+            {/* Company logo and name - left aligned */}
+            <div className="flex flex-col items-start mb-8">
+              <img
+                className="w-24 h-[88px] object-cover mb-4"
+                alt="Jan bau"
+                src="/jan-bau-1.png"
+              />
+              <div className="[font-family:'Roboto',Helvetica] font-bold text-white text-[23px] tracking-[0] leading-[57.5px] text-left">
+                J.A.N. BAU GmbH
+              </div>
+            </div>
+
+            {/* Company description with proper line breaks */}
+            <div className="mb-12 [font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] max-w-3xl">
+              Wir sind ein Unternehmen der Bauindustrie im<br />
+              Bereich Trockenes, Akustik und Spachtelarbeiten.<br />
+              Unser Leistungsspektrum umfasst die gesamte<br />
+              Trockenbau, Akustik, Brandschutz und<br />
+              Schallschutz, Türmontagen, Abbruch und<br />
+              Entsorgung sowie Spachtelarbeiten.
+            </div>
+
+            {/* Social media icons */}
+            <div className="flex gap-12 mb-12">
+              <FacebookIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+              <InstagramIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+              <WhatsAppIcon className="w-12 h-12 text-white hover:text-[#e53935] cursor-pointer transition-colors" />
+            </div>
+
+            {/* Contact information */}
+            <div className="mb-12">
+              <div className="mb-6 text-[#e53935] [font-family:'Roboto',Helvetica] font-bold text-xl tracking-[0] leading-[22px]">
+                KONTAKT
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  Tödistrasse 2, 8854 Siebnen
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-center gap-3 mb-4">
+                <Phone className="w-6 h-6 text-white flex-shrink-0" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  +41 76 220 46 53
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center gap-3 mb-8">
+                <Mail className="w-6 h-6 text-white flex-shrink-0" />
+                <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px]">
+                  info@jan-bau.ch
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="mb-12">
+              <div className="mb-4 [font-family:'Roboto',Helvetica] font-bold text-[#f84646] text-xl tracking-[0] leading-[22px]">
+                Navigation
+              </div>
+              <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[22px] space-y-1">
+                <Link to="/" className="block hover:text-[#e53935] transition-colors">Startseite</Link>
+                <Link to="/referenzen" className="block hover:text-[#e53935] transition-colors">Referenzen</Link>
+                <Link to="/leistungen" className="block hover:text-[#e53935] transition-colors">Leistungen</Link>
+                <Link to="/unternehmen" className="block hover:text-[#e53935] transition-colors">Unternehmen</Link>
+                <Link to="/kontakt" className="block hover:text-[#e53935] transition-colors">Kontakt</Link>
+                <Link to="/datenschutz" className="block hover:text-[#e53935] transition-colors">Datenschutz</Link>
+              </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="[font-family:'Roboto',Helvetica] font-normal text-white text-base tracking-[0] leading-[30px]">
+              ©&nbsp;&nbsp;J.A.N Bau GmbH. Alle Rechte vorbehalten. Webseite
+              Design: mizmu.ch
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Layout - Keep existing mobile design unchanged */}
+      <div className="lg:hidden bg-white max-w-md mx-auto relative min-h-screen">
         {/* Header with logo and menu */}
         <div className="flex justify-between items-center p-4 relative z-10">
           <Link to="/" className="w-8 h-8 sm:w-10 sm:h-10">
