@@ -121,6 +121,35 @@ export const Leistungen = (): JSX.Element => {
               </div>
             </div>
 
+            {/* Gipserarbeiten Section - Reversed layout (content left, image right) */}
+            <div className="mb-16">
+              <div className="bg-[#3a3a3a] rounded-lg overflow-hidden">
+                <div className="flex">
+                  {/* Left side - Content */}
+                  <div className="w-1/2 p-12 flex flex-col justify-center">
+                    <h2 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-8 tracking-wide">
+                      GIPSERARBEITEN
+                    </h2>
+                    <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
+                      Gipserarbeiten aus – von klassischen Putztechniken bis hin zu modernen 
+                      Struktur- und Glättputzen im Innenbereich. Unsere Expertise erstreckt sich über 
+                      Kalk-, Zement-, Gips- und Lehmputze, angepasst an die technischen Anforderungen 
+                      und gestalterischen Wünsche unserer Kunden.
+                    </p>
+                  </div>
+                  
+                  {/* Right side - Image */}
+                  <div className="w-1/2">
+                    <img
+                      src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      alt="Gipserarbeiten - Plastering work"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Service Sections Grid - 2x2 Layout */}
             <div className="grid grid-cols-2 gap-8 mb-16">
               {/* TROCKENBAU Section */}
@@ -397,6 +426,33 @@ export const Leistungen = (): JSX.Element => {
                 insbesondere in der Ausführung von fugenlosen Akustikdecken-Systemen. Diese bieten 
                 nicht nur eine exzellente Schallabsorption, sondern ermöglichen durch ihre homogene 
                 Oberfläche auch ein hochwertiges architektonisches Erscheinungsbild.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Gipserarbeiten Section - Stacked layout for mobile */}
+        <div className="px-6 mb-8">
+          <div className="bg-[#3a3a3a] rounded-lg overflow-hidden">
+            {/* Image */}
+            <div className="w-full h-[200px]">
+              <img
+                src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Gipserarbeiten - Plastering work"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Content */}
+            <div className="p-6">
+              <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
+                GIPSERARBEITEN
+              </h2>
+              <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
+                Gipserarbeiten aus – von klassischen Putztechniken bis hin zu modernen 
+                Struktur- und Glättputzen im Innenbereich. Unsere Expertise erstreckt sich über 
+                Kalk-, Zement-, Gips- und Lehmputze, angepasst an die technischen Anforderungen 
+                und gestalterischen Wünsche unserer Kunden.
               </p>
             </div>
           </div>
