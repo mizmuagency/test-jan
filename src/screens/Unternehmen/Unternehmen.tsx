@@ -47,6 +47,45 @@ export const Unternehmen = (): JSX.Element => {
     }
   ];
 
+  // Desktop team members data with actual names from screenshot
+  const desktopTeamMembers = [
+    {
+      name: "Nazmin Hrnijic",
+      position: "Funktion",
+      phone: "T: +41 76 310 27 09",
+      email: "vorna.name@jan-bau.ch",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+    },
+    {
+      name: "Amina Hrnijic", 
+      position: "Funktion",
+      phone: "T: +41 76 310 27 09",
+      email: "vorna.name@jan-bau.ch",
+      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+    },
+    {
+      name: "Naim Hrnijic",
+      position: "Funktion", 
+      phone: "T: +41 76 310 27 09",
+      email: "vorna.name@jan-bau.ch",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+    },
+    {
+      name: "Kjenan Misinii",
+      position: "Funktion",
+      phone: "T: +41 76 310 27 09", 
+      email: "vorna.name@jan-bau.ch",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+    },
+    {
+      name: "Felix Bärtschiger",
+      position: "Funktion",
+      phone: "T: +41 76 310 27 09",
+      email: "vorna.name@jan-bau.ch", 
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+    }
+  ];
+
   // WhatsApp Icon Component
   const WhatsAppIcon = ({ className }: { className?: string }) => (
     <svg
@@ -131,6 +170,88 @@ export const Unternehmen = (): JSX.Element => {
                   zusammengesetzt aus den Anfangsbuchstaben unserer Kinder und uns selbst. Denn für uns ist 
                   die Firma mehr als ein Arbeitsplatz – sie ist ein Teil unseres Lebens.
                 </p>
+              </div>
+            </div>
+
+            {/* Persons Section - Dark Background matching screenshot */}
+            <div className="bg-[#3a3a3a] rounded-lg p-12 mb-16">
+              <h2 className="text-4xl font-bold text-white [font-family:'Roboto',Helvetica] mb-12 tracking-wide">
+                PERSONEN
+              </h2>
+              
+              {/* Team Grid - 2 on top, 3 on bottom */}
+              <div className="space-y-8">
+                {/* Top Row - 2 people */}
+                <div className="grid grid-cols-2 gap-12 justify-center max-w-2xl mx-auto">
+                  {desktopTeamMembers.slice(0, 2).map((member, index) => (
+                    <div key={index} className="text-center">
+                      {/* Profile Picture - Circular */}
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      
+                      {/* Name */}
+                      <h3 className="text-white [font-family:'Roboto',Helvetica] font-bold text-base mb-1">
+                        {member.name}
+                      </h3>
+                      
+                      {/* Position */}
+                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-sm mb-2">
+                        {member.position}
+                      </p>
+                      
+                      {/* Phone */}
+                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-sm mb-1">
+                        {member.phone}
+                      </p>
+                      
+                      {/* Email */}
+                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-sm">
+                        {member.email}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Bottom Row - 3 people */}
+                <div className="grid grid-cols-3 gap-8 justify-center max-w-3xl mx-auto">
+                  {desktopTeamMembers.slice(2, 5).map((member, index) => (
+                    <div key={index + 2} className="text-center">
+                      {/* Profile Picture - Circular */}
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      
+                      {/* Name */}
+                      <h3 className="text-white [font-family:'Roboto',Helvetica] font-bold text-base mb-1">
+                        {member.name}
+                      </h3>
+                      
+                      {/* Position */}
+                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-sm mb-2">
+                        {member.position}
+                      </p>
+                      
+                      {/* Phone */}
+                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-sm mb-1">
+                        {member.phone}
+                      </p>
+                      
+                      {/* Email */}
+                      <p className="text-gray-300 [font-family:'Roboto',Helvetica] text-sm">
+                        {member.email}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
