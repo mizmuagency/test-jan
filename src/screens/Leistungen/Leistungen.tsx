@@ -181,95 +181,39 @@ export const Leistungen = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Service Sections Grid - 2x2 Layout */}
-            <div className="grid grid-cols-2 gap-8 mb-16">
-              {/* BRANDSCHUTZ Section */}
-              <div className="relative h-[400px] overflow-hidden rounded-lg group">
-                <img
-                  src="https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Brandschutz"
-                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                    BRANDSCHUTZ
-                  </h2>
-                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
-                    Sicherheit steht an erster Stelle. Unsere Brandschutzlösungen erfüllen alle aktuellen Normen und Vorschriften. Wir installieren zertifizierte Brandschutzsysteme für Wände, Decken und Durchführungen. Von der Planung bis zur Ausführung gewährleisten wir höchste Sicherheitsstandards.
-                  </p>
-                </div>
+            {/* Pre-footer Section - Matching the screenshot */}
+            <div className="bg-[#f8f8f8] py-20 px-12 rounded-lg">
+              <div className="max-w-2xl">
+                <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                  Wir wissen, was
+                </h2>
+                <h2 className="text-4xl font-bold [font-family:'Roboto',Helvetica] mb-2">
+                  <span className="text-[#e53935]">Ihre Bedürfnisse</span>
+                </h2>
+                <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-8">
+                  sind!
+                </h2>
+                
+                <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-2">
+                  Wir lieben und leben Gips. Mit viel Know-
+                </p>
+                <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-2">
+                  how und hohem Engagement setzen wir
+                </p>
+                <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-2">
+                  die Wünsche unserer Kunden präzise und
+                </p>
+                <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-8">
+                  vor allem pünktlich um.
+                </p>
+                
+                <Link
+                  to="/unternehmen"
+                  className="inline-block bg-[#e53935] text-white px-8 py-3 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-sm hover:bg-[#c62828] transition-colors"
+                >
+                  ZUM UNTERNEHMEN
+                </Link>
               </div>
-
-              {/* SPACHTELARBEITEN Section */}
-              <div className="relative h-[400px] overflow-hidden rounded-lg group">
-                <img
-                  src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Spachtelarbeiten"
-                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                    SPACHTELARBEITEN
-                  </h2>
-                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
-                    Perfekte Oberflächen sind unser Markenzeichen. Von der Grundspachtelung bis zur Q4-Qualität bieten wir alle Qualitätsstufen für höchste Ansprüche. Unsere erfahrenen Spezialisten sorgen für makellose Ergebnisse und bereiten Ihre Oberflächen optimal für die weitere Bearbeitung vor.
-                  </p>
-                </div>
-              </div>
-
-              {/* TÜRMONTAGEN Section */}
-              <div className="relative h-[400px] overflow-hidden rounded-lg group">
-                <img
-                  src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Türmontagen"
-                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                    TÜRMONTAGEN
-                  </h2>
-                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
-                    Professionelle Türmontagen gehören zu unserem Kerngeschäft. Wir installieren alle Arten von Türen - von Standard-Innentüren bis hin zu speziellen Brandschutztüren. Dabei achten wir auf präzise Ausrichtung, ordnungsgemäße Abdichtung und perfekte Funktionalität.
-                  </p>
-                </div>
-              </div>
-
-              {/* ABBRUCH & ENTSORGUNG Section */}
-              <div className="relative h-[400px] overflow-hidden rounded-lg group">
-                <img
-                  src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Abbruch & Entsorgung"
-                  className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h2 className="text-3xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                    ABBRUCH & ENTSORGUNG
-                  </h2>
-                  <p className="text-white [font-family:'Roboto',Helvetica] text-base leading-relaxed">
-                    Fachgerechter Rückbau und umweltgerechte Entsorgung sind wichtige Bestandteile unserer Dienstleistungen. Wir führen kontrollierte Abbrucharbeiten durch und sorgen für die ordnungsgemäße Trennung und Entsorgung der Materialien nach geltenden Umweltbestimmungen.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Call to Action Section */}
-            <div className="text-center bg-[#f8f8f8] py-16 px-8 rounded-lg">
-              <h3 className="text-3xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
-                Interesse an unseren Leistungen?
-              </h3>
-              <p className="text-black [font-family:'Roboto',Helvetica] text-lg mb-8 max-w-2xl mx-auto">
-                Kontaktieren Sie uns für ein unverbindliches Angebot.
-              </p>
-              <Link
-                to="/kontakt"
-                className="inline-block bg-[#e53935] text-white px-12 py-4 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-lg hover:bg-[#c62828] transition-colors"
-              >
-                KONTAKT AUFNEHMEN
-              </Link>
             </div>
           </div>
         </main>
@@ -518,63 +462,37 @@ export const Leistungen = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Detailed Service Sections */}
-        <div className="px-6 pb-8">
-          {/* BRANDSCHUTZ Section */}
-          <div className="mb-8">
-            <div className="relative h-[400px] overflow-hidden rounded-lg">
-              <img
-                src="https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Brandschutz"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                  BRANDSCHUTZ
-                </h2>
-                <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
-                  Sicherheit steht an erster Stelle. Unsere Brandschutzlösungen erfüllen alle aktuellen Normen und Vorschriften. Wir installieren zertifizierte Brandschutzsysteme für Wände, Decken und Durchführungen. Von der Planung bis zur Ausführung gewährleisten wir höchste Sicherheitsstandards.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* SPACHTELARBEITEN Section */}
-          <div className="mb-8">
-            <div className="relative h-[400px] overflow-hidden rounded-lg">
-              <img
-                src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Spachtelarbeiten"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-2xl font-bold text-white [font-family:'Roboto',Helvetica] mb-4 tracking-wide">
-                  SPACHTELARBEITEN
-                </h2>
-                <p className="text-white [font-family:'Roboto',Helvetica] text-sm leading-relaxed">
-                  Perfekte Oberflächen sind unser Markenzeichen. Von der Grundspachtelung bis zur Q4-Qualität bieten wir alle Qualitätsstufen für höchste Ansprüche. Unsere erfahrenen Spezialisten sorgen für makellose Ergebnisse und bereiten Ihre Oberflächen optimal für die weitere Bearbeitung vor.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action Section */}
-        <div className="px-6 py-8 bg-[#f5f5f5]">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-black [font-family:'Roboto',Helvetica] mb-4">
-              Interesse an unseren Leistungen?
-            </h3>
-            <p className="text-gray-700 [font-family:'Roboto',Helvetica] text-sm sm:text-base mb-6">
-              Kontaktieren Sie uns für ein unverbindliches Angebot.
+        {/* Mobile Pre-footer Section - Light Background */}
+        <div className="w-full bg-[#f8f8f8] px-6 py-12">
+          <div className="max-w-sm">
+            <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+              Wir wissen, was
+            </h2>
+            <h2 className="text-2xl font-bold [font-family:'Roboto',Helvetica] mb-2">
+              <span className="text-[#e53935]">Ihre Bedürfnisse</span>
+            </h2>
+            <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-6">
+              sind!
+            </h2>
+            
+            <p className="text-black [font-family:'Roboto',Helvetica] text-sm mb-1">
+              Wir lieben und leben Gips. Mit viel Know-
             </p>
+            <p className="text-black [font-family:'Roboto',Helvetica] text-sm mb-1">
+              how und hohem Engagement setzen wir
+            </p>
+            <p className="text-black [font-family:'Roboto',Helvetica] text-sm mb-1">
+              die Wünsche unserer Kunden präzise und
+            </p>
+            <p className="text-black [font-family:'Roboto',Helvetica] text-sm mb-6">
+              vor allem pünktlich um.
+            </p>
+            
             <Link
-              to="/kontakt"
-              className="inline-block bg-[#e53935] text-white px-8 py-3 rounded-lg [font-family:'Roboto',Helvetica] font-semibold hover:bg-[#c62828] transition-colors"
+              to="/unternehmen"
+              className="inline-block bg-[#e53935] text-white px-6 py-3 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-sm hover:bg-[#c62828] transition-colors"
             >
-              KONTAKT AUFNEHMEN
+              ZUM UNTERNEHMEN
             </Link>
           </div>
         </div>
