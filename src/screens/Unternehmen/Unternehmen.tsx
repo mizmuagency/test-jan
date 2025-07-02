@@ -302,6 +302,43 @@ export const Unternehmen = (): JSX.Element => {
               </div>
             </div>
           </div>
+
+          {/* Pre-footer Section - Matching screenshot exactly */}
+          <div className="w-full bg-white py-20">
+            <div className="max-w-7xl mx-auto px-8">
+              <div className="max-w-2xl">
+                <h2 className="text-6xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                  Was umfasst
+                </h2>
+                <h2 className="text-6xl font-bold [font-family:'Roboto',Helvetica] mb-2">
+                  unser <span className="text-[#e53935]">Leistungs-</span>
+                </h2>
+                <h2 className="text-6xl font-bold [font-family:'Roboto',Helvetica] mb-8">
+                  <span className="text-[#e53935]">spektrum?</span>
+                </h2>
+                
+                <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-2">
+                  Nebst klassischem und modernem
+                </p>
+                <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-2">
+                  Trockenbau, sind wir in weiteren
+                </p>
+                <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-2">
+                  Disziplinen Spezialisten. Hier erfahren
+                </p>
+                <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-8">
+                  Sie konkret worin.
+                </p>
+                
+                <Link
+                  to="/leistungen"
+                  className="inline-block bg-[#e53935] text-white px-8 py-3 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-sm hover:bg-[#c62828] transition-colors"
+                >
+                  ZU UNSEREN LEISTUNGEN
+                </Link>
+              </div>
+            </div>
+          </div>
         </main>
 
         {/* Desktop Footer Section */}
