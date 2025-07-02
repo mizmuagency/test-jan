@@ -289,6 +289,37 @@ export const Referenzen = (): JSX.Element => {
           </div>
         </main>
 
+        {/* Pre-footer Section - Light Background */}
+        <div className="w-full bg-[#f8f8f8] py-20">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                Wir möchten, dass
+              </h2>
+              <h2 className="text-4xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+                unsere Arbeit
+              </h2>
+              <h2 className="text-4xl font-bold [font-family:'Roboto',Helvetica] mb-8">
+                <span className="text-[#e53935]">sichtbar</span> <span className="text-black">bleibt!</span>
+              </h2>
+              
+              <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-2">
+                Erfahren Sie mehr über uns
+              </p>
+              <p className="text-black [font-family:'Roboto',Helvetica] text-base mb-8">
+                und unser Unternehmen.
+              </p>
+              
+              <Link
+                to="/unternehmen"
+                className="inline-block bg-[#e53935] text-white px-8 py-3 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-sm hover:bg-[#c62828] transition-colors"
+              >
+                ZUM UNTERNEHMEN
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Desktop Footer Section */}
         <div className="w-full bg-[#262a28] px-8 py-16">
           <div className="max-w-7xl mx-auto">
@@ -546,6 +577,35 @@ export const Referenzen = (): JSX.Element => {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Mobile Pre-footer Section - Light Background */}
+        <div className="w-full bg-[#f8f8f8] px-6 py-12">
+          <div className="max-w-sm">
+            <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+              Wir möchten, dass
+            </h2>
+            <h2 className="text-2xl font-bold text-black [font-family:'Roboto',Helvetica] mb-2">
+              unsere Arbeit
+            </h2>
+            <h2 className="text-2xl font-bold [font-family:'Roboto',Helvetica] mb-6">
+              <span className="text-[#e53935]">sichtbar</span> <span className="text-black">bleibt!</span>
+            </h2>
+            
+            <p className="text-black [font-family:'Roboto',Helvetica] text-sm mb-1">
+              Erfahren Sie mehr über uns
+            </p>
+            <p className="text-black [font-family:'Roboto',Helvetica] text-sm mb-6">
+              und unser Unternehmen.
+            </p>
+            
+            <Link
+              to="/unternehmen"
+              className="inline-block bg-[#e53935] text-white px-6 py-3 rounded-lg [font-family:'Roboto',Helvetica] font-bold text-sm hover:bg-[#c62828] transition-colors"
+            >
+              ZUM UNTERNEHMEN
+            </Link>
+          </div>
         </div>
 
         {/* Complete Footer Section - Same as front page */}
