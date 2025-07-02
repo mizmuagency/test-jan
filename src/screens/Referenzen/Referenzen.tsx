@@ -244,9 +244,9 @@ export const Referenzen = (): JSX.Element => {
                     />
                   </div>
 
-                  {/* Expanded Project Details - Matching Screenshot Layout */}
+                  {/* Expanded Project Details - Same background color as main background */}
                   {expandedProject === project.id && (
-                    <div className="bg-[#1a1d1b] rounded-lg overflow-hidden">
+                    <div className="bg-[#262a28] rounded-lg overflow-hidden">
                       {/* Project Details Table - Exact spacing and formatting from screenshot */}
                       <div className="p-6">
                         <div className="space-y-4">
